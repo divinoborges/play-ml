@@ -1,0 +1,240 @@
+{
+  "common": {
+    "appName": "PlayML",
+    "tagline": "Learn Machine Learning by doing. Train models, make predictions, and understand algorithms — all in your browser.",
+    "cta": "Explore Algorithms",
+    "language": "Language",
+    "backToCatalog": "Back to Catalog",
+    "metrics": "Metrics"
+  },
+  "categories": {
+    "all": "All",
+    "regression": "Regression",
+    "classification": "Classification",
+    "deepLearning": "Deep Learning"
+  },
+  "sections": {
+    "context": "Where is this used?",
+    "dataset": "The Data",
+    "howItWorks": "How It Works",
+    "training": "Train the Model",
+    "prediction": "Test the Model",
+    "metrics": "How did it perform?"
+  },
+  "actions": {
+    "train": "Train Model",
+    "predict": "Predict",
+    "training": "Training...",
+    "predicting": "Predicting...",
+    "trainFirst": "Train a model first to make predictions.",
+    "trainAll": "Train All",
+    "seeTheMath": "See the math",
+    "seeTheCode": "See the code",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "understandingMetrics": "Understanding Metrics"
+  },
+  "data": {
+    "trainData": "Training Data",
+    "testData": "Test Data",
+    "samples": "samples",
+    "features": "features",
+    "useSample": "Use a test sample",
+    "selectImage": "Select an image to classify"
+  },
+  "metrics": {
+    "mse": "MSE (Mean Squared Error)",
+    "rmse": "RMSE (Root Mean Squared Error)",
+    "mae": "MAE (Mean Absolute Error)",
+    "r2": "R² (Coefficient of Determination)",
+    "accuracy": "Accuracy",
+    "precision": "Precision",
+    "recall": "Recall",
+    "f1": "F1-Score",
+    "confusionMatrix": "Confusion Matrix",
+    "lossChart": "Training Loss",
+    "trainingTime": "Training Time"
+  },
+  "algorithms": {
+    "linear-regression": {
+      "name": "Linear Regression",
+      "summary": "Predict numeric values from continuous data",
+      "contextTitle": "Real Estate Pricing",
+      "contextDescription": "Real estate companies use linear regression to estimate rental prices based on area, number of rooms, and location. By identifying the relationship between property features and prices, they can provide accurate valuations for new listings.",
+      "contextExtra1": "Salary prediction based on years of experience",
+      "contextExtra2": "Sales forecasting based on advertising spend",
+      "contextExtra3": "Demand estimation for seasonal products",
+      "contextExtra4": "Energy consumption forecasting for buildings",
+      "contextExtra5": "Crop yield prediction based on weather data",
+      "contextExtra6": "Insurance premium estimation from risk factors"
+    },
+    "logistic-regression": {
+      "name": "Logistic Regression",
+      "summary": "Classify data into binary categories",
+      "contextTitle": "Customer Churn Prediction",
+      "contextDescription": "Telecom companies use logistic regression to predict which customers are likely to cancel their subscriptions. By analyzing usage patterns, contract type, and support interactions, they can proactively retain at-risk customers.",
+      "contextExtra1": "Email spam detection",
+      "contextExtra2": "Medical diagnosis (disease present or not)",
+      "contextExtra3": "Credit default prediction",
+      "contextExtra4": "Employee attrition prediction",
+      "contextExtra5": "Click-through rate prediction for ads",
+      "contextExtra6": "Sentiment polarity classification (positive/negative)"
+    },
+    "decision-tree": {
+      "name": "Decision Tree",
+      "summary": "Make decisions through a series of questions",
+      "contextTitle": "Medical Triage",
+      "contextDescription": "Hospitals use decision trees to assist in patient triage. By evaluating symptoms, age, and test results in a structured sequence of decisions, they can quickly prioritize patients and suggest preliminary diagnoses.",
+      "contextExtra1": "Loan approval decision systems",
+      "contextExtra2": "Customer segmentation for marketing",
+      "contextExtra3": "Quality control in manufacturing",
+      "contextExtra4": "Fraud detection in insurance claims",
+      "contextExtra5": "Species classification in ecology",
+      "contextExtra6": "Technical support ticket routing"
+    },
+    "knn": {
+      "name": "KNN",
+      "summary": "Classify by finding similar examples nearby",
+      "contextTitle": "Movie Recommendation",
+      "contextDescription": "Streaming platforms use K-Nearest Neighbors to recommend movies. By finding movies similar to ones you've enjoyed — based on genre, duration, and ratings — the algorithm suggests titles you're likely to watch next.",
+      "contextExtra1": "Product recommendations in e-commerce",
+      "contextExtra2": "Handwriting digit recognition",
+      "contextExtra3": "Anomaly detection in network traffic",
+      "contextExtra4": "Music playlist generation by similarity",
+      "contextExtra5": "Patient matching for clinical trials",
+      "contextExtra6": "Real-time pricing based on competitor data"
+    },
+    "svm": {
+      "name": "SVM",
+      "summary": "Find the optimal boundary between classes",
+      "contextTitle": "Fraud Detection",
+      "contextDescription": "Banks use Support Vector Machines to detect fraudulent transactions. By analyzing transaction amount, time, and location patterns, SVM finds the optimal boundary separating legitimate transactions from suspicious ones.",
+      "contextExtra1": "Face recognition in security systems",
+      "contextExtra2": "Text categorization for document classification",
+      "contextExtra3": "Gene expression classification in bioinformatics",
+      "contextExtra4": "Spam image detection in social media",
+      "contextExtra5": "Handwritten signature verification",
+      "contextExtra6": "Cancer cell detection in medical scans"
+    },
+    "random-forest": {
+      "name": "Random Forest",
+      "summary": "Combine many decision trees for better accuracy",
+      "contextTitle": "Credit Analysis",
+      "contextDescription": "Financial institutions use Random Forest to evaluate credit applications. By combining hundreds of decision trees that each analyze income, credit history, and debt ratios, the ensemble model provides robust and accurate approval decisions.",
+      "contextExtra1": "Stock market trend prediction",
+      "contextExtra2": "Disease risk assessment from patient records",
+      "contextExtra3": "Customer lifetime value estimation",
+      "contextExtra4": "Network intrusion detection in cybersecurity",
+      "contextExtra5": "Land cover classification from satellite imagery",
+      "contextExtra6": "Predictive maintenance for industrial equipment"
+    },
+    "cnn": {
+      "name": "CNN",
+      "summary": "Recognize patterns in images using neural networks",
+      "contextTitle": "Medical Image Diagnosis",
+      "contextDescription": "Hospitals use Convolutional Neural Networks to analyze chest X-rays and detect pneumonia. The CNN learns to identify patterns in medical images — from edges and textures to complex structures — that indicate the presence of disease.",
+      "contextExtra1": "Self-driving car object detection",
+      "contextExtra2": "Quality inspection in manufacturing",
+      "contextExtra3": "Facial recognition for access control",
+      "contextExtra4": "Agricultural pest and disease identification",
+      "contextExtra5": "Satellite image analysis for urban planning",
+      "contextExtra6": "Retail shelf inventory monitoring"
+    },
+    "transformers": {
+      "name": "Transformers",
+      "summary": "Understand text by learning word relationships",
+      "contextTitle": "Sentiment Analysis",
+      "contextDescription": "E-commerce platforms use Transformers to analyze product reviews and determine customer sentiment. The attention mechanism allows the model to understand context and nuance in text, distinguishing positive from negative opinions.",
+      "contextExtra1": "Machine translation between languages",
+      "contextExtra2": "Chatbot and virtual assistant systems",
+      "contextExtra3": "Text summarization for news articles",
+      "contextExtra4": "Code generation and autocompletion",
+      "contextExtra5": "Legal document analysis and contract review",
+      "contextExtra6": "Voice-to-text transcription systems"
+    }
+  },
+  "metricsPage": {
+    "title": "Understanding Metrics",
+    "subtitle": "Learn what each metric measures, the math behind it, and when to use it in real-world problems.",
+    "regressionTitle": "Regression Metrics",
+    "regressionDescription": "Metrics for evaluating models that predict continuous numeric values.",
+    "classificationTitle": "Classification Metrics",
+    "classificationDescription": "Metrics for evaluating models that predict discrete categories or classes.",
+    "whenToUse": "When to use",
+    "whenNotToUse": "When NOT to use",
+    "interpretation": "How to interpret",
+    "mse": {
+      "name": "MSE — Mean Squared Error",
+      "explanation": "Measures the average of the squared differences between predicted and actual values. Larger errors are penalized more heavily due to squaring.",
+      "interpretation": "MSE is always ≥ 0. Lower is better. MSE = 0 means perfect predictions. The units are squared (e.g., dollars²), making it harder to interpret directly.",
+      "whenToUse": "Use MSE when large errors are particularly undesirable. For example, in energy consumption forecasting for power grids, a large prediction error could lead to blackouts or wasted energy — MSE ensures the model is heavily penalized for those dangerous outliers.",
+      "whenNotToUse": "Avoid MSE when you need an interpretable error in the same units as your target. For instance, if you're telling a client their house price estimate is off by '250,000 dollars²', that's meaningless. Use RMSE or MAE instead for human-readable reports."
+    },
+    "rmse": {
+      "name": "RMSE — Root Mean Squared Error",
+      "explanation": "The square root of MSE, bringing the error back to the same units as the target variable. Still penalizes large errors more than small ones.",
+      "interpretation": "RMSE is always ≥ 0, in the same units as the prediction. Lower is better. An RMSE of 5,000 on house prices means 'on average, predictions are about $5,000 off'.",
+      "whenToUse": "Use RMSE when you want an interpretable error metric that still penalizes outliers. For salary prediction in HR analytics, RMSE tells you the typical dollar amount your model is off by, while still flagging if it wildly misses some predictions.",
+      "whenNotToUse": "Avoid RMSE when your data has many outliers that aren't your fault (e.g., noisy sensor data). A few extreme readings will inflate RMSE disproportionately, making a good model look bad. Use MAE for a more robust alternative."
+    },
+    "mae": {
+      "name": "MAE — Mean Absolute Error",
+      "explanation": "Measures the average of the absolute differences between predicted and actual values. Treats all errors equally regardless of size.",
+      "interpretation": "MAE is always ≥ 0, in the same units as the prediction. Lower is better. MAE = 0 means perfect predictions. MAE is more robust to outliers than MSE/RMSE.",
+      "whenToUse": "Use MAE when all errors matter equally and outliers shouldn't dominate the evaluation. For delivery time estimation, whether you're off by 5 or 50 minutes matters proportionally — MAE gives you a fair average error without letting rare extreme delays skew the picture.",
+      "whenNotToUse": "Avoid MAE when large errors have disproportionate consequences. In predicting structural load capacity for bridges, a large error could be catastrophic — MAE would treat a 1-ton error and a 50-ton error too similarly. Use MSE/RMSE to heavily penalize those dangerous large errors."
+    },
+    "r2": {
+      "name": "R² — Coefficient of Determination",
+      "explanation": "Measures the proportion of variance in the target variable that the model explains. Compares your model against a baseline that always predicts the mean.",
+      "interpretation": "R² ranges from -∞ to 1. R² = 1 means the model explains all variance (perfect). R² = 0 means the model is no better than predicting the mean. R² < 0 means the model is worse than the mean.",
+      "whenToUse": "Use R² to compare models on the same dataset. In real estate pricing, R² = 0.85 tells you the model explains 85% of price variation — an intuitive way to communicate model quality to non-technical stakeholders.",
+      "whenNotToUse": "Avoid relying on R² alone when your dataset is small or when comparing models across different datasets. R² always increases when you add more features (even irrelevant ones), which can be misleading. In financial forecasting with few data points, a high R² might indicate overfitting rather than genuine predictive power."
+    },
+    "accuracy": {
+      "name": "Accuracy",
+      "explanation": "The proportion of all predictions that were correct. Simply: how often was the model right?",
+      "interpretation": "Accuracy ranges from 0 to 1 (or 0% to 100%). Higher is better. Accuracy = 1 means every prediction was correct.",
+      "whenToUse": "Use accuracy when classes are balanced (roughly equal number of examples per class). For sentiment analysis of product reviews where positive and negative reviews are equally common, accuracy gives a straightforward picture of model performance.",
+      "whenNotToUse": "Never use accuracy as the primary metric on imbalanced datasets. Imagine a rare disease screening where only 1% of patients are sick: a model that always predicts 'healthy' achieves 99% accuracy while missing every single sick patient. That 99% accuracy is useless — and dangerous. Use Precision, Recall, or F1 instead."
+    },
+    "precision": {
+      "name": "Precision",
+      "explanation": "Of all the cases the model predicted as positive, how many were actually positive? Precision measures the quality of positive predictions.",
+      "interpretation": "Precision ranges from 0 to 1. Higher means fewer false positives. Precision = 1 means every positive prediction was correct (no false alarms).",
+      "whenToUse": "Use precision when false positives are costly. In email spam filtering, a false positive means a legitimate email goes to spam — the user misses an important message. High precision ensures that when the model says 'spam', it's almost certainly spam.",
+      "whenNotToUse": "Don't rely on precision alone when missing positives is dangerous. In emergency room triage, a model classifying patients for the red room (critical care): high precision means 'when we send someone to the red room, they really need it' — but it says nothing about patients who needed the red room but were sent home. A model that only flags the most obvious cases has great precision but lets critical patients die. You need Recall here."
+    },
+    "recall": {
+      "name": "Recall (Sensitivity)",
+      "explanation": "Of all the actual positive cases, how many did the model correctly identify? Recall measures the model's ability to find all positives.",
+      "interpretation": "Recall ranges from 0 to 1. Higher means fewer false negatives. Recall = 1 means the model found every positive case (no misses).",
+      "whenToUse": "Use recall when missing a positive case has severe consequences. In cancer screening, a missed diagnosis (false negative) means a patient with cancer goes untreated. High recall ensures the model catches as many true cases as possible, even at the cost of some false alarms.",
+      "whenNotToUse": "Don't rely on recall alone when false positives have high costs. In fraud detection for a bank that freezes accounts on suspicion: maximizing recall catches all fraud, but if it also flags thousands of legitimate transactions, customers are locked out of their accounts. The bank faces angry customers and operational overload. Balance recall with precision using F1."
+    },
+    "f1": {
+      "name": "F1-Score",
+      "explanation": "The harmonic mean of Precision and Recall. Provides a single score that balances both concerns — avoiding false positives and avoiding false negatives.",
+      "interpretation": "F1 ranges from 0 to 1. Higher is better. F1 = 1 means perfect precision AND recall. The harmonic mean ensures F1 is low if either precision or recall is low.",
+      "whenToUse": "Use F1 when you need to balance precision and recall. In content moderation for social media, you want to remove harmful content (high recall) without censoring legitimate posts (high precision). F1 gives a single number that reflects both concerns.",
+      "whenNotToUse": "Avoid F1 when precision and recall are not equally important for your problem. In airport security screening, recall is far more important than precision (missing a threat is catastrophic, extra bag checks are just inconvenient). F1 would unfairly penalize the system for having many false positives. Use recall with a precision threshold instead."
+    },
+    "confusionMatrix": {
+      "name": "Confusion Matrix",
+      "explanation": "A table showing the counts of True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). The foundation from which Accuracy, Precision, Recall, and F1 are all derived.",
+      "interpretation": "The diagonal (TP, TN) shows correct predictions. Off-diagonal (FP, FN) shows errors. Ideally, all values are on the diagonal. The matrix reveals WHERE the model fails, not just how often.",
+      "whenToUse": "Always examine the confusion matrix when doing classification. In medical diagnosis with multiple conditions, the matrix reveals if the model consistently confuses pneumonia with bronchitis — information that a single metric like accuracy would hide.",
+      "whenNotToUse": "The confusion matrix is not a single metric — you can't easily compare models using it alone. When you need a quick comparison between 10 models, use it alongside summary metrics (F1, AUC). The matrix is for diagnosis, not for ranking."
+    },
+    "rocAuc": {
+      "name": "ROC Curve / AUC",
+      "explanation": "The ROC (Receiver Operating Characteristic) curve plots the True Positive Rate (Recall) against the False Positive Rate at every possible classification threshold. AUC (Area Under the Curve) summarizes the entire ROC curve as a single number.",
+      "interpretation": "AUC ranges from 0 to 1. AUC = 0.5 means the model is no better than random. AUC = 1.0 means perfect separation between classes. AUC > 0.9 is considered excellent, 0.7-0.9 is good, < 0.7 is poor.",
+      "whenToUse": "Use AUC when you want to evaluate a model's discriminative ability independently of any specific threshold. In credit scoring, the bank will set its own risk threshold later — AUC tells you how well the model separates good from bad borrowers across all possible cutoff points.",
+      "whenNotToUse": "Avoid AUC on highly imbalanced datasets. In rare fraud detection (0.01% fraud rate), the FPR denominator (true negatives) is enormous, so even thousands of false positives barely move FPR. The ROC curve looks great while the model floods the fraud team with false alerts. Use Precision-Recall curves instead."
+    }
+  },
+  "footer": {
+    "credit": "Created by Divino Borges"
+  }
+}

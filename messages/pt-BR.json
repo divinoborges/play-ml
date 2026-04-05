@@ -1,0 +1,240 @@
+{
+  "common": {
+    "appName": "PlayML",
+    "tagline": "Aprenda Machine Learning na prática. Treine modelos, faça predições e entenda algoritmos — tudo no seu navegador.",
+    "cta": "Explorar Algoritmos",
+    "language": "Idioma",
+    "backToCatalog": "Voltar ao Catálogo",
+    "metrics": "Métricas"
+  },
+  "categories": {
+    "all": "Todos",
+    "regression": "Regressão",
+    "classification": "Classificação",
+    "deepLearning": "Deep Learning"
+  },
+  "sections": {
+    "context": "Onde isso é usado?",
+    "dataset": "Os Dados",
+    "howItWorks": "Como Funciona",
+    "training": "Treinar o Modelo",
+    "prediction": "Testar o Modelo",
+    "metrics": "Como foi o desempenho?"
+  },
+  "actions": {
+    "train": "Treinar Modelo",
+    "predict": "Predizer",
+    "training": "Treinando...",
+    "predicting": "Predizendo...",
+    "trainFirst": "Treine um modelo primeiro para fazer predições.",
+    "trainAll": "Treinar Todos",
+    "seeTheMath": "Ver a matemática",
+    "seeTheCode": "Ver o código",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "understandingMetrics": "Entendendo as Métricas"
+  },
+  "data": {
+    "trainData": "Dados de Treino",
+    "testData": "Dados de Teste",
+    "samples": "amostras",
+    "features": "features",
+    "useSample": "Usar uma amostra de teste",
+    "selectImage": "Selecione uma imagem para classificar"
+  },
+  "metrics": {
+    "mse": "MSE (Erro Quadrático Médio)",
+    "rmse": "RMSE (Raiz do Erro Quadrático Médio)",
+    "mae": "MAE (Erro Absoluto Médio)",
+    "r2": "R² (Coeficiente de Determinação)",
+    "accuracy": "Acurácia",
+    "precision": "Precisão",
+    "recall": "Recall (Revocação)",
+    "f1": "F1-Score",
+    "confusionMatrix": "Matriz de Confusão",
+    "lossChart": "Perda do Treinamento",
+    "trainingTime": "Tempo de Treinamento"
+  },
+  "algorithms": {
+    "linear-regression": {
+      "name": "Linear Regression",
+      "summary": "Preveja valores numéricos a partir de dados contínuos",
+      "contextTitle": "Precificação de Imóveis",
+      "contextDescription": "Empresas imobiliárias usam regressão linear para estimar o valor do aluguel com base em metragem, número de quartos e localização. Ao identificar a relação entre as características do imóvel e os preços, elas conseguem fornecer avaliações precisas para novos anúncios.",
+      "contextExtra1": "Previsão de salário com base em anos de experiência",
+      "contextExtra2": "Previsão de vendas com base em gastos com publicidade",
+      "contextExtra3": "Estimativa de demanda para produtos sazonais",
+      "contextExtra4": "Previsão de consumo de energia em edifícios",
+      "contextExtra5": "Previsão de produtividade agrícola com dados climáticos",
+      "contextExtra6": "Estimativa de prêmio de seguro a partir de fatores de risco"
+    },
+    "logistic-regression": {
+      "name": "Logistic Regression",
+      "summary": "Classifique dados em categorias binárias",
+      "contextTitle": "Predição de Churn de Clientes",
+      "contextDescription": "Empresas de telecomunicações usam regressão logística para prever quais clientes têm maior chance de cancelar suas assinaturas. Ao analisar padrões de uso, tipo de contrato e interações com suporte, elas podem reter proativamente clientes em risco.",
+      "contextExtra1": "Detecção de spam em e-mails",
+      "contextExtra2": "Diagnóstico médico (doença presente ou não)",
+      "contextExtra3": "Predição de inadimplência de crédito",
+      "contextExtra4": "Predição de rotatividade de funcionários",
+      "contextExtra5": "Predição de taxa de cliques em anúncios",
+      "contextExtra6": "Classificação de polaridade de sentimento (positivo/negativo)"
+    },
+    "decision-tree": {
+      "name": "Decision Tree",
+      "summary": "Tome decisões através de uma série de perguntas",
+      "contextTitle": "Triagem Médica",
+      "contextDescription": "Hospitais usam árvores de decisão para auxiliar na triagem de pacientes. Ao avaliar sintomas, idade e resultados de exames em uma sequência estruturada de decisões, eles podem priorizar rapidamente os pacientes e sugerir diagnósticos preliminares.",
+      "contextExtra1": "Sistemas de decisão para aprovação de empréstimos",
+      "contextExtra2": "Segmentação de clientes para marketing",
+      "contextExtra3": "Controle de qualidade na manufatura",
+      "contextExtra4": "Detecção de fraude em sinistros de seguro",
+      "contextExtra5": "Classificação de espécies em ecologia",
+      "contextExtra6": "Roteamento de tickets de suporte técnico"
+    },
+    "knn": {
+      "name": "KNN",
+      "summary": "Classifique encontrando exemplos similares próximos",
+      "contextTitle": "Recomendação de Filmes",
+      "contextDescription": "Plataformas de streaming usam K-Nearest Neighbors para recomendar filmes. Ao encontrar filmes similares aos que você gostou — com base em gênero, duração e avaliações — o algoritmo sugere títulos que você provavelmente vai querer assistir.",
+      "contextExtra1": "Recomendações de produtos em e-commerce",
+      "contextExtra2": "Reconhecimento de dígitos manuscritos",
+      "contextExtra3": "Detecção de anomalias em tráfego de rede",
+      "contextExtra4": "Geração de playlists musicais por similaridade",
+      "contextExtra5": "Pareamento de pacientes para ensaios clínicos",
+      "contextExtra6": "Precificação em tempo real com dados da concorrência"
+    },
+    "svm": {
+      "name": "SVM",
+      "summary": "Encontre a fronteira ideal entre classes",
+      "contextTitle": "Detecção de Fraude",
+      "contextDescription": "Bancos usam Support Vector Machines para detectar transações fraudulentas. Ao analisar padrões de valor, horário e localização das transações, o SVM encontra a fronteira ideal separando transações legítimas das suspeitas.",
+      "contextExtra1": "Reconhecimento facial em sistemas de segurança",
+      "contextExtra2": "Categorização de textos para classificação de documentos",
+      "contextExtra3": "Classificação de expressão gênica em bioinformática",
+      "contextExtra4": "Detecção de imagens spam em redes sociais",
+      "contextExtra5": "Verificação de assinaturas manuscritas",
+      "contextExtra6": "Detecção de células cancerígenas em exames médicos"
+    },
+    "random-forest": {
+      "name": "Random Forest",
+      "summary": "Combine muitas árvores de decisão para maior acurácia",
+      "contextTitle": "Análise de Crédito",
+      "contextDescription": "Instituições financeiras usam Random Forest para avaliar solicitações de crédito. Ao combinar centenas de árvores de decisão que analisam renda, histórico de crédito e índice de endividamento, o modelo ensemble fornece decisões de aprovação robustas e precisas.",
+      "contextExtra1": "Previsão de tendências do mercado de ações",
+      "contextExtra2": "Avaliação de risco de doenças a partir de registros médicos",
+      "contextExtra3": "Estimativa de valor vitalício do cliente",
+      "contextExtra4": "Detecção de intrusão em redes de cibersegurança",
+      "contextExtra5": "Classificação de cobertura terrestre por imagens de satélite",
+      "contextExtra6": "Manutenção preditiva para equipamentos industriais"
+    },
+    "cnn": {
+      "name": "CNN",
+      "summary": "Reconheça padrões em imagens usando redes neurais",
+      "contextTitle": "Diagnóstico por Imagem Médica",
+      "contextDescription": "Hospitais usam Redes Neurais Convolucionais para analisar raio-X de tórax e detectar pneumonia. A CNN aprende a identificar padrões em imagens médicas — de bordas e texturas a estruturas complexas — que indicam a presença de doenças.",
+      "contextExtra1": "Detecção de objetos em carros autônomos",
+      "contextExtra2": "Inspeção de qualidade na manufatura",
+      "contextExtra3": "Reconhecimento facial para controle de acesso",
+      "contextExtra4": "Identificação de pragas e doenças na agricultura",
+      "contextExtra5": "Análise de imagens de satélite para planejamento urbano",
+      "contextExtra6": "Monitoramento de estoque em prateleiras de varejo"
+    },
+    "transformers": {
+      "name": "Transformers",
+      "summary": "Compreenda texto aprendendo relações entre palavras",
+      "contextTitle": "Análise de Sentimento",
+      "contextDescription": "Plataformas de e-commerce usam Transformers para analisar avaliações de produtos e determinar o sentimento dos clientes. O mecanismo de atenção permite que o modelo compreenda contexto e nuances no texto, distinguindo opiniões positivas de negativas.",
+      "contextExtra1": "Tradução automática entre idiomas",
+      "contextExtra2": "Sistemas de chatbot e assistente virtual",
+      "contextExtra3": "Sumarização de textos para artigos de notícias",
+      "contextExtra4": "Geração de código e autocompletação",
+      "contextExtra5": "Análise de documentos jurídicos e revisão de contratos",
+      "contextExtra6": "Sistemas de transcrição de voz para texto"
+    }
+  },
+  "metricsPage": {
+    "title": "Entendendo as Métricas",
+    "subtitle": "Aprenda o que cada métrica mede, a matemática por trás dela, e quando usá-la em problemas do mundo real.",
+    "regressionTitle": "Métricas de Regressão",
+    "regressionDescription": "Métricas para avaliar modelos que preveem valores numéricos contínuos.",
+    "classificationTitle": "Métricas de Classificação",
+    "classificationDescription": "Métricas para avaliar modelos que preveem categorias ou classes discretas.",
+    "whenToUse": "Quando usar",
+    "whenNotToUse": "Quando NÃO usar",
+    "interpretation": "Como interpretar",
+    "mse": {
+      "name": "MSE — Erro Quadrático Médio",
+      "explanation": "Mede a média das diferenças ao quadrado entre os valores previstos e reais. Erros maiores são penalizados mais pesadamente devido à elevação ao quadrado.",
+      "interpretation": "MSE é sempre ≥ 0. Menor é melhor. MSE = 0 significa previsões perfeitas. As unidades são ao quadrado (ex.: reais²), dificultando a interpretação direta.",
+      "whenToUse": "Use MSE quando erros grandes são particularmente indesejáveis. Na previsão de consumo de energia para redes elétricas, um grande erro de previsão pode levar a apagões ou desperdício — o MSE garante que o modelo seja pesadamente penalizado por esses outliers perigosos.",
+      "whenNotToUse": "Evite MSE quando você precisa de um erro interpretável nas mesmas unidades do alvo. Se você diz a um cliente que a estimativa do preço da casa está errada por '250.000 reais²', isso não faz sentido. Use RMSE ou MAE para relatórios legíveis."
+    },
+    "rmse": {
+      "name": "RMSE — Raiz do Erro Quadrático Médio",
+      "explanation": "A raiz quadrada do MSE, trazendo o erro de volta às mesmas unidades da variável alvo. Ainda penaliza erros grandes mais que pequenos.",
+      "interpretation": "RMSE é sempre ≥ 0, nas mesmas unidades da previsão. Menor é melhor. Um RMSE de R$ 5.000 em preços de casas significa 'em média, as previsões erram cerca de R$ 5.000'.",
+      "whenToUse": "Use RMSE quando quiser uma métrica de erro interpretável que ainda penaliza outliers. Na previsão de salários em RH, o RMSE indica o valor típico em reais que o modelo erra, enquanto ainda sinaliza se ele erra muito em algumas previsões.",
+      "whenNotToUse": "Evite RMSE quando seus dados têm muitos outliers que não são culpa do modelo (ex.: dados de sensores ruidosos). Algumas leituras extremas inflarão o RMSE desproporcionalmente, fazendo um bom modelo parecer ruim. Use MAE como alternativa mais robusta."
+    },
+    "mae": {
+      "name": "MAE — Erro Absoluto Médio",
+      "explanation": "Mede a média das diferenças absolutas entre valores previstos e reais. Trata todos os erros igualmente, independentemente do tamanho.",
+      "interpretation": "MAE é sempre ≥ 0, nas mesmas unidades da previsão. Menor é melhor. MAE = 0 significa previsões perfeitas. MAE é mais robusto a outliers que MSE/RMSE.",
+      "whenToUse": "Use MAE quando todos os erros importam igualmente e outliers não devem dominar a avaliação. Na estimativa de tempo de entrega, se você erra por 5 ou 50 minutos, importa proporcionalmente — o MAE dá um erro médio justo sem deixar atrasos extremos raros distorcerem a imagem.",
+      "whenNotToUse": "Evite MAE quando erros grandes têm consequências desproporcionais. Na previsão de capacidade de carga estrutural de pontes, um erro grande pode ser catastrófico — o MAE trataria um erro de 1 tonelada e um de 50 toneladas de forma muito similar. Use MSE/RMSE para penalizar pesadamente esses erros grandes perigosos."
+    },
+    "r2": {
+      "name": "R² — Coeficiente de Determinação",
+      "explanation": "Mede a proporção da variância na variável alvo que o modelo explica. Compara seu modelo com um baseline que sempre prevê a média.",
+      "interpretation": "R² varia de -∞ a 1. R² = 1 significa que o modelo explica toda a variância (perfeito). R² = 0 significa que o modelo não é melhor que prever a média. R² < 0 significa que o modelo é pior que a média.",
+      "whenToUse": "Use R² para comparar modelos no mesmo dataset. Na precificação de imóveis, R² = 0.85 diz que o modelo explica 85% da variação de preço — uma forma intuitiva de comunicar qualidade do modelo para stakeholders não-técnicos.",
+      "whenNotToUse": "Evite confiar apenas no R² quando seu dataset é pequeno ou ao comparar modelos em datasets diferentes. R² sempre aumenta ao adicionar mais features (mesmo irrelevantes), o que pode ser enganoso. Em previsões financeiras com poucos dados, um R² alto pode indicar overfitting em vez de poder preditivo genuíno."
+    },
+    "accuracy": {
+      "name": "Acurácia",
+      "explanation": "A proporção de todas as previsões que estavam corretas. Simplesmente: com que frequência o modelo acertou?",
+      "interpretation": "Acurácia varia de 0 a 1 (ou 0% a 100%). Maior é melhor. Acurácia = 1 significa que toda previsão estava correta.",
+      "whenToUse": "Use acurácia quando as classes são balanceadas (número aproximadamente igual de exemplos por classe). Na análise de sentimento de avaliações de produtos onde reviews positivos e negativos são igualmente comuns, a acurácia dá uma imagem direta do desempenho.",
+      "whenNotToUse": "Nunca use acurácia como métrica principal em datasets desbalanceados. Imagine um rastreamento de doença rara onde apenas 1% dos pacientes estão doentes: um modelo que sempre prevê 'saudável' alcança 99% de acurácia enquanto perde todos os pacientes doentes. Essa acurácia de 99% é inútil — e perigosa. Use Precisão, Recall ou F1."
+    },
+    "precision": {
+      "name": "Precisão",
+      "explanation": "De todos os casos que o modelo previu como positivos, quantos eram realmente positivos? A precisão mede a qualidade das previsões positivas.",
+      "interpretation": "Precisão varia de 0 a 1. Maior significa menos falsos positivos. Precisão = 1 significa que toda previsão positiva estava correta (sem alarmes falsos).",
+      "whenToUse": "Use precisão quando falsos positivos são custosos. Na filtragem de spam de e-mail, um falso positivo significa que um e-mail legítimo vai para o spam — o usuário perde uma mensagem importante. Alta precisão garante que quando o modelo diz 'spam', é quase certamente spam.",
+      "whenNotToUse": "Não confie apenas na precisão quando perder positivos é perigoso. Na triagem de emergência, um modelo classificando pacientes para a sala vermelha (cuidados críticos): alta precisão significa 'quando mandamos alguém para a sala vermelha, realmente precisa' — mas não diz nada sobre pacientes que precisavam da sala vermelha mas foram mandados para casa. Um modelo que só sinaliza os casos mais óbvios tem ótima precisão mas deixa pacientes críticos morrerem. Você precisa de Recall aqui."
+    },
+    "recall": {
+      "name": "Recall (Sensibilidade)",
+      "explanation": "De todos os casos realmente positivos, quantos o modelo identificou corretamente? O recall mede a capacidade do modelo de encontrar todos os positivos.",
+      "interpretation": "Recall varia de 0 a 1. Maior significa menos falsos negativos. Recall = 1 significa que o modelo encontrou todos os casos positivos (sem omissões).",
+      "whenToUse": "Use recall quando perder um caso positivo tem consequências graves. No rastreamento de câncer, um diagnóstico perdido (falso negativo) significa que um paciente com câncer não é tratado. Alto recall garante que o modelo capture o máximo de casos verdadeiros possível, mesmo ao custo de alguns alarmes falsos.",
+      "whenNotToUse": "Não confie apenas no recall quando falsos positivos têm alto custo. Na detecção de fraude de um banco que congela contas por suspeita: maximizar recall pega toda fraude, mas se também sinaliza milhares de transações legítimas, clientes ficam bloqueados. O banco enfrenta clientes furiosos e sobrecarga operacional. Equilibre recall com precisão usando F1."
+    },
+    "f1": {
+      "name": "F1-Score",
+      "explanation": "A média harmônica de Precisão e Recall. Fornece um score único que equilibra ambas as preocupações — evitar falsos positivos e evitar falsos negativos.",
+      "interpretation": "F1 varia de 0 a 1. Maior é melhor. F1 = 1 significa precisão E recall perfeitos. A média harmônica garante que F1 é baixo se precisão ou recall for baixo.",
+      "whenToUse": "Use F1 quando precisar equilibrar precisão e recall. Na moderação de conteúdo em redes sociais, você quer remover conteúdo prejudicial (alto recall) sem censurar posts legítimos (alta precisão). F1 dá um número único que reflete ambas as preocupações.",
+      "whenNotToUse": "Evite F1 quando precisão e recall não são igualmente importantes para o seu problema. Na segurança aeroportuária, recall é muito mais importante que precisão (perder uma ameaça é catastrófico, verificações extras de bagagem são apenas inconvenientes). F1 penalizaria injustamente o sistema por ter muitos falsos positivos. Use recall com um limiar de precisão."
+    },
+    "confusionMatrix": {
+      "name": "Matriz de Confusão",
+      "explanation": "Uma tabela mostrando as contagens de Verdadeiros Positivos (VP), Verdadeiros Negativos (VN), Falsos Positivos (FP) e Falsos Negativos (FN). A base da qual Acurácia, Precisão, Recall e F1 são todos derivados.",
+      "interpretation": "A diagonal (VP, VN) mostra previsões corretas. Fora da diagonal (FP, FN) mostra erros. Idealmente, todos os valores estão na diagonal. A matriz revela ONDE o modelo falha, não apenas com que frequência.",
+      "whenToUse": "Sempre examine a matriz de confusão ao fazer classificação. No diagnóstico médico com múltiplas condições, a matriz revela se o modelo consistentemente confunde pneumonia com bronquite — informação que uma métrica única como acurácia esconderia.",
+      "whenNotToUse": "A matriz de confusão não é uma métrica única — você não pode facilmente comparar modelos usando apenas ela. Quando precisa de uma comparação rápida entre 10 modelos, use-a junto com métricas resumidas (F1, AUC). A matriz é para diagnóstico, não para ranking."
+    },
+    "rocAuc": {
+      "name": "Curva ROC / AUC",
+      "explanation": "A curva ROC (Receiver Operating Characteristic) plota a Taxa de Verdadeiros Positivos (Recall) contra a Taxa de Falsos Positivos em cada limiar de classificação possível. AUC (Área Sob a Curva) resume toda a curva ROC em um único número.",
+      "interpretation": "AUC varia de 0 a 1. AUC = 0.5 significa que o modelo não é melhor que aleatório. AUC = 1.0 significa separação perfeita entre classes. AUC > 0.9 é considerado excelente, 0.7-0.9 é bom, < 0.7 é fraco.",
+      "whenToUse": "Use AUC quando quiser avaliar a capacidade discriminativa de um modelo independentemente de qualquer limiar específico. No credit scoring, o banco definirá seu próprio limiar de risco depois — AUC diz quão bem o modelo separa bons de maus pagadores em todos os pontos de corte possíveis.",
+      "whenNotToUse": "Evite AUC em datasets altamente desbalanceados. Na detecção de fraude rara (0,01% de fraude), o denominador da FPR (verdadeiros negativos) é enorme, então mesmo milhares de falsos positivos mal movem a FPR. A curva ROC parece ótima enquanto o modelo inunda a equipe de fraude com alertas falsos. Use curvas Precisão-Recall no lugar."
+    }
+  },
+  "footer": {
+    "credit": "Idealizado por Divino Borges"
+  }
+}
