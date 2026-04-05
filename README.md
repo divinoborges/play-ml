@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Replace with Neo-Pop styled banner image -->
-  <img src="public/images/play-ml-banner.png" alt="PlayML" width="600" />
+  <img src="./public/images/play-ml-banner.png" alt="PlayML" width="600" />
 </p>
 
 <p align="center">
@@ -71,15 +71,15 @@ PlayML covers the following ML concepts, organized from foundational to advanced
 
 <p align="center">
   <!-- Replace with actual screenshots -->
-  <img src="public/images/screenshot-home.png" alt="PlayML Homepage" width="800" />
+  <img src="./public/images/screenshot-home.png" alt="PlayML Homepage" width="800" />
 </p>
 
 <p align="center">
-  <img src="public/images/screenshot-algorithm.png" alt="Algorithm Visualization" width="800" />
+  <img src="./public/images/screenshot-algorithm.png" alt="Algorithm Visualization" width="800" />
 </p>
 
 <p align="center">
-  <img src="public/images/screenshot-metrics.png" alt="Metrics Dashboard" width="800" />
+  <img src="./public/images/screenshot-metrics.png" alt="Metrics Dashboard" width="800" />
 </p>
 
 ## Tech Stack
