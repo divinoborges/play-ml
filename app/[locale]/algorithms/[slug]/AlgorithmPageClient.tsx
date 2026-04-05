@@ -54,7 +54,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    fetch(algorithm.datasetPath)
+    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${algorithm.datasetPath}`)
       .then((r) => r.json())
       .then(setDataset)
       .catch(console.error);
