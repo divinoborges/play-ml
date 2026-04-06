@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status" /></a>
-  <a href="#license"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License: MIT" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/PRs-welcome-orange" alt="PRs Welcome" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/demo-Try%20it%20live-ff69b4" alt="Try it Live" /></a>
+  <a href="https://github.com/divinoborges/play-ml/actions/workflows/nextjs.yml"><img src="https://img.shields.io/github/actions/workflow/status/divinoborges/play-ml/nextjs.yml?branch=main" alt="Build Status" /></a>
+  <a href="#license"><img src="https://img.shields.io/github/license/divinoborges/play-ml" alt="License: MIT" /></a>
+  <a href="https://github.com/divinoborges/play-ml/issues"><img src="https://img.shields.io/badge/PRs-welcome-orange" alt="PRs Welcome" /></a>
+  <a href="https://divinoborges.github.io/play-ml/"><img src="https://img.shields.io/badge/demo-Try%20it%20live-ff69b4" alt="Try it Live" /></a>
 </p>
 
 ---
@@ -36,7 +36,7 @@ PlayML is an interactive, browser-based platform for learning Machine Learning c
 To run locally:
 
 ```bash
-git clone https://github.com/your-username/play-ml.git
+git clone https://github.com/divinoborges/play-ml.git
 cd play-ml
 npm install
 npm run dev
@@ -110,9 +110,8 @@ All skill levels are welcome — whether it's fixing a typo, adding a new algori
 
 ## Community
 
-<!-- Replace with actual links when available -->
-- 💬 [Discussions](https://github.com/your-username/play-ml/discussions) — Ask questions and share ideas
-- 🐛 [Issues](https://github.com/your-username/play-ml/issues) — Report bugs or request features
+- 💬 [Discussions](https://github.com/divinoborges/play-ml/discussions) — Ask questions and share ideas
+- 🐛 [Issues](https://github.com/divinoborges/play-ml/issues) — Report bugs or request features
 
 ## License
 
