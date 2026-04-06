@@ -25,6 +25,7 @@ import PredictButton from "@/components/shared/PredictButton";
 import MetricsPanel from "@/components/shared/MetricsPanel";
 import PredictionForm from "@/components/shared/PredictionForm";
 import BrowserFrame from "@/components/shared/BrowserFrame";
+import PythonHighlighter from "@/components/shared/PythonHighlighter";
 import { getMathContent } from "@/lib/math-content";
 import { getCodeContent } from "@/lib/code-content";
 
@@ -239,7 +240,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
             </div>
           )}
           {codeExpanded && (
-            <div className="mt-3 rounded-2xl border-2 border-black bg-white p-6 relative">
+            <div className="mt-3 rounded-2xl border-2 border-[#44475A] bg-[#282A36] p-6 relative">
               <button
                 onClick={() => {
                   const code = getCodeContent(slug);
@@ -249,13 +250,11 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
                     setTimeout(() => setCopied(false), 2000);
                   }
                 }}
-                className="absolute top-4 right-4 rounded-full border-2 border-black bg-sand px-3 py-1 font-heading text-xs font-bold text-black uppercase hover:bg-black hover:text-white transition-colors"
+                className="absolute top-4 right-4 rounded-full border-2 border-[#44475A] bg-[#44475A] text-[#F8F8F2] px-3 py-1 font-heading text-xs font-bold uppercase hover:bg-[#6272A4] transition-colors"
               >
                 {copied ? t("actions.copied") : t("actions.copy")}
               </button>
-              <pre className="overflow-x-auto font-mono text-sm text-black/80 leading-relaxed">
-                <code>{getCodeContent(slug)}</code>
-              </pre>
+              <PythonHighlighter code={getCodeContent(slug) ?? ""} />
             </div>
           )}
         </div>
