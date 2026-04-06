@@ -24,6 +24,12 @@ export interface ClusteringMetrics {
   numClusters: number;
 }
 
+export interface GenerativeMetrics {
+  generatorLoss: number;
+  discriminatorLoss: number;
+  numSamplesGenerated: number;
+}
+
 export interface TrainingHistory {
   loss: number[];
   valLoss?: number[];
@@ -31,7 +37,7 @@ export interface TrainingHistory {
 
 type MetricsPanelProps = {
   algorithmType: AlgorithmType;
-  metrics: RegressionMetrics | ClassificationMetrics | ClusteringMetrics | null;
+  metrics: RegressionMetrics | ClassificationMetrics | ClusteringMetrics | GenerativeMetrics | null;
   trainingTime?: number;
   history?: TrainingHistory;
 };
@@ -63,6 +69,11 @@ export default function MetricsPanel({
       ) : algorithmType === "clustering" ? (
         <ClusteringMetricsView
           metrics={metrics as ClusteringMetrics}
+          t={t}
+        />
+      ) : algorithmType === "generative" ? (
+        <GenerativeMetricsView
+          metrics={metrics as GenerativeMetrics}
           t={t}
         />
       ) : (
@@ -171,6 +182,37 @@ function ClassificationMetricsView({
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function GenerativeMetricsView({
+  metrics,
+  t,
+}: {
+  metrics: GenerativeMetrics;
+  t: ReturnType<typeof useTranslations>;
+}) {
+  const items = [
+    { key: "generatorLoss" as const, value: metrics.generatorLoss, format: (v: number) => v.toFixed(3) },
+    { key: "discriminatorLoss" as const, value: metrics.discriminatorLoss, format: (v: number) => v.toFixed(3) },
+    { key: "samplesGenerated" as const, value: metrics.numSamplesGenerated, format: (v: number) => String(v) },
+  ];
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      {items.map(({ key, value, format }) => (
+        <div key={key} className="flex flex-col items-center gap-2">
+          <div className="flex h-20 w-full items-center justify-center rounded-2xl bg-yellow-pop border-2 border-black">
+            <span className="font-heading text-display-sm text-black">
+              {format(value)}
+            </span>
+          </div>
+          <span className="rounded-full bg-sand px-4 py-1 font-heading text-xs font-bold text-black text-center">
+            {t(key)}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

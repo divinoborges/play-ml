@@ -265,6 +265,31 @@ const mathContent: Record<string, ReactNode> = {
       />
     </div>
   ),
+
+  gan: (
+    <div className="space-y-6">
+      <MathBlock
+        label="Minimax Objective"
+        formula="\min_G \max_D \; \mathbb{E}_{\mathbf{x} \sim p_{\text{data}}} [\log D(\mathbf{x})] + \mathbb{E}_{\mathbf{z} \sim p_z} [\log(1 - D(G(\mathbf{z})))]"
+        note="G tries to minimize, D tries to maximize. G generates fake samples from noise z. D distinguishes real from fake."
+      />
+      <MathBlock
+        label="Discriminator Loss"
+        formula="L_D = -\frac{1}{m} \sum_{i=1}^{m} \left[ \log D(\mathbf{x}_i) + \log(1 - D(G(\mathbf{z}_i))) \right]"
+        note="D is rewarded for correctly classifying real samples as 1 and fake samples as 0."
+      />
+      <MathBlock
+        label="Generator Loss"
+        formula="L_G = -\frac{1}{m} \sum_{i=1}^{m} \log D(G(\mathbf{z}_i))"
+        note="G is rewarded when D classifies its fakes as real (D(G(z)) → 1). This is the non-saturating form."
+      />
+      <MathBlock
+        label="Nash Equilibrium"
+        formula="D^*(\mathbf{x}) = \frac{p_{\text{data}}(\mathbf{x})}{p_{\text{data}}(\mathbf{x}) + p_g(\mathbf{x})}"
+        note="At the optimal point, the Discriminator outputs 0.5 everywhere — it can no longer distinguish real from generated."
+      />
+    </div>
+  ),
 };
 
 export function getMathContent(slug: string): ReactNode | null {

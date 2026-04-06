@@ -11,6 +11,7 @@ import type {
   RegressionMetrics,
   ClassificationMetrics,
   ClusteringMetrics,
+  GenerativeMetrics,
   TrainingHistory,
 } from "@/components/shared/MetricsPanel";
 import { getVisualization } from "@/components/visualizations";
@@ -284,7 +285,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
               <>
                 <MetricsPanel
                   algorithmType={algorithm.algorithmType}
-                  metrics={trainResult.metrics as RegressionMetrics | ClassificationMetrics | ClusteringMetrics}
+                  metrics={trainResult.metrics as RegressionMetrics | ClassificationMetrics | ClusteringMetrics | GenerativeMetrics}
                   trainingTime={trainResult.trainingTime}
                   history={trainResult.history as TrainingHistory | undefined}
                 />
@@ -300,36 +301,38 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
         </div>
       </section>
 
-      {/* Section 5: Prediction — ORANGE POP */}
+      {/* Section 5: Prediction / Generation — ORANGE POP */}
       <section className="bg-orange-pop px-4 sm:px-6 lg:px-8 py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="font-heading text-display-sm uppercase text-black mb-6">
-            {t("sections.prediction")}
+            {algorithm.algorithmType === "generative" ? t("sections.generateSamples") : t("sections.prediction")}
           </h2>
           <div className="space-y-6">
-            <div className="rounded-2xl border-2 border-black bg-white p-6">
-              {slug === "cnn" && dataset.metadata && "imageSize" in dataset.metadata ? (
-                <ImageSelector
-                  samples={dataset.testData}
-                  target={dataset.target}
-                  imageSize={(dataset.metadata as Record<string, unknown>).imageSize as number}
-                  selectedIndex={selectedImageIndex}
-                  onSelect={(index, sample) => {
-                    setSelectedImageIndex(index);
-                    handleUseSample(sample);
-                  }}
-                />
-              ) : (
-                <PredictionForm
-                  dataset={dataset}
-                  values={predictionInputs}
-                  onChange={(key, value) =>
-                    setPredictionInputs((prev) => ({ ...prev, [key]: value }))
-                  }
-                  onUseSample={handleUseSample}
-                />
-              )}
-            </div>
+            {algorithm.algorithmType !== "generative" && (
+              <div className="rounded-2xl border-2 border-black bg-white p-6">
+                {slug === "cnn" && dataset.metadata && "imageSize" in dataset.metadata ? (
+                  <ImageSelector
+                    samples={dataset.testData}
+                    target={dataset.target}
+                    imageSize={(dataset.metadata as Record<string, unknown>).imageSize as number}
+                    selectedIndex={selectedImageIndex}
+                    onSelect={(index, sample) => {
+                      setSelectedImageIndex(index);
+                      handleUseSample(sample);
+                    }}
+                  />
+                ) : (
+                  <PredictionForm
+                    dataset={dataset}
+                    values={predictionInputs}
+                    onChange={(key, value) =>
+                      setPredictionInputs((prev) => ({ ...prev, [key]: value }))
+                    }
+                    onUseSample={handleUseSample}
+                  />
+                )}
+              </div>
+            )}
             <div className="flex items-center gap-4">
               <PredictButton
                 onClick={handlePredict}
@@ -340,7 +343,23 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
                 <p className="font-body text-sm text-black/60">{t("actions.trainFirst")}</p>
               )}
             </div>
-            {prediction && (
+            {prediction && algorithm.algorithmType === "generative" ? (
+              <div className="rounded-3xl border-3 border-black bg-sand p-8">
+                <p className="font-heading text-xs font-bold text-black uppercase mb-4">
+                  {t("sections.generatedSamples")}
+                </p>
+                <GeneratedSamplesPlot
+                  realData={dataset.trainData.map((r) => [Number(r.x), Number(r.y)] as [number, number])}
+                  generatedData={(() => {
+                    try {
+                      return JSON.parse(String(prediction.value)).map((p: {x: number; y: number}) => [p.x, p.y] as [number, number]);
+                    } catch {
+                      return [];
+                    }
+                  })()}
+                />
+              </div>
+            ) : prediction ? (
               <div className="rounded-3xl border-3 border-black bg-sand p-8">
                 <div className={slug === "cnn" && selectedImageIndex !== null ? "flex gap-6 items-start" : ""}>
                   {slug === "cnn" && selectedImageIndex !== null && dataset.metadata && "imageSize" in dataset.metadata && (
@@ -384,11 +403,55 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
                   </div>
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </section>
 
+    </div>
+  );
+}
+
+function GeneratedSamplesPlot({
+  realData,
+  generatedData,
+}: {
+  realData: [number, number][];
+  generatedData: [number, number][];
+}) {
+  const allPoints = [...realData, ...generatedData];
+  const xs = allPoints.map((p) => p[0]);
+  const ys = allPoints.map((p) => p[1]);
+  const xMin = Math.min(...xs) - 1;
+  const xMax = Math.max(...xs) + 1;
+  const yMin = Math.min(...ys) - 1;
+  const yMax = Math.max(...ys) + 1;
+
+  const w = 300;
+  const h = 300;
+  const pad = 30;
+
+  const scaleX = (x: number) => pad + ((x - xMin) / (xMax - xMin)) * (w - 2 * pad);
+  const scaleY = (y: number) => h - pad - ((y - yMin) / (yMax - yMin)) * (h - 2 * pad);
+
+  return (
+    <div className="flex flex-col items-center">
+      <svg viewBox={`0 0 ${w} ${h}`} className="w-full max-w-sm border-2 border-black rounded-2xl bg-white">
+        {realData.map(([x, y], i) => (
+          <circle key={`r${i}`} cx={scaleX(x)} cy={scaleY(y)} r={3} fill="#3B82F6" opacity={0.5} />
+        ))}
+        {generatedData.map(([x, y], i) => (
+          <circle key={`g${i}`} cx={scaleX(x)} cy={scaleY(y)} r={3} fill="#F59E0B" opacity={0.7} />
+        ))}
+      </svg>
+      <div className="flex gap-4 mt-2 font-heading text-xs font-bold text-black">
+        <span className="flex items-center gap-1">
+          <span className="w-3 h-3 rounded-full bg-blue-electric inline-block" /> Real
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="w-3 h-3 rounded-full bg-amber-400 inline-block" /> Generated
+        </span>
+      </div>
     </div>
   );
 }

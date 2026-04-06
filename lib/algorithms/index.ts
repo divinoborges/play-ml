@@ -9,6 +9,7 @@ import { cnn } from "./cnn";
 import { transformers } from "./transformers";
 import { kmeans } from "./kmeans";
 import { rnn } from "./rnn";
+import { gan } from "./gan";
 
 const modules: Record<string, AlgorithmModule> = {
   "linear-regression": linearRegression,
@@ -21,6 +22,7 @@ const modules: Record<string, AlgorithmModule> = {
   transformers: transformers,
   kmeans: kmeans,
   rnn: rnn,
+  gan: gan,
 };
 
 export function getAlgorithmModule(

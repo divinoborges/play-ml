@@ -21,7 +21,9 @@
     "training": "Treinar o Modelo",
     "prediction": "Testar o Modelo",
     "metrics": "Como foi o desempenho?",
-    "clusterAssignment": "Atribuição de Cluster"
+    "clusterAssignment": "Atribuição de Cluster",
+    "generateSamples": "Gerar Amostras",
+    "generatedSamples": "Amostras Geradas"
   },
   "actions": {
     "train": "Treinar Modelo",
@@ -58,7 +60,10 @@
     "trainingTime": "Tempo de Treinamento",
     "inertia": "Inércia (WCSS)",
     "silhouetteScore": "Silhouette Score",
-    "numClusters": "Clusters"
+    "numClusters": "Clusters",
+    "generatorLoss": "Perda do Gerador",
+    "discriminatorLoss": "Perda do Discriminador",
+    "samplesGenerated": "Amostras Geradas"
   },
   "algorithms": {
     "linear-regression": {
@@ -168,6 +173,18 @@
       "contextExtra4": "Particionamento de zonas geográficas para rotas de entrega",
       "contextExtra5": "Descoberta de padrões de expressão gênica em genômica",
       "contextExtra6": "Segmentação de audiência em redes sociais"
+    },
+    "gan": {
+      "name": "GAN",
+      "summary": "Gere dados pela competição adversarial entre redes",
+      "contextTitle": "Geração e Síntese de Dados",
+      "contextDescription": "Estúdios criativos e laboratórios de pesquisa usam Redes Adversariais Generativas para criar dados sintéticos. Uma rede Geradora aprende a produzir amostras realistas competindo contra um Discriminador que tenta distinguir o real do falso — o jogo adversarial impulsiona ambos a melhorar até que os dados gerados sejam indistinguíveis dos reais.",
+      "contextExtra1": "Síntese de imagens fotorrealistas e transferência de estilo",
+      "contextExtra2": "Aumento de dados para treinar outros modelos de ML",
+      "contextExtra3": "Design de moléculas de medicamentos em pesquisa farmacêutica",
+      "contextExtra4": "Geração de assets e texturas para jogos",
+      "contextExtra5": "Dados médicos sintéticos para pesquisa com privacidade",
+      "contextExtra6": "Aprimoramento de imagens em super-resolução"
     },
     "rnn": {
       "name": "RNN",

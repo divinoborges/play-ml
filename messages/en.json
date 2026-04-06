@@ -21,7 +21,9 @@
     "training": "Train the Model",
     "prediction": "Test the Model",
     "metrics": "How did it perform?",
-    "clusterAssignment": "Cluster Assignment"
+    "clusterAssignment": "Cluster Assignment",
+    "generateSamples": "Generate Samples",
+    "generatedSamples": "Generated Samples"
   },
   "actions": {
     "train": "Train Model",
@@ -58,7 +60,10 @@
     "trainingTime": "Training Time",
     "inertia": "Inertia (WCSS)",
     "silhouetteScore": "Silhouette Score",
-    "numClusters": "Clusters"
+    "numClusters": "Clusters",
+    "generatorLoss": "Generator Loss",
+    "discriminatorLoss": "Discriminator Loss",
+    "samplesGenerated": "Samples Generated"
   },
   "algorithms": {
     "linear-regression": {
@@ -168,6 +173,18 @@
       "contextExtra4": "Geographic zone partitioning for delivery routes",
       "contextExtra5": "Gene expression pattern discovery in genomics",
       "contextExtra6": "Social media audience segmentation"
+    },
+    "gan": {
+      "name": "GAN",
+      "summary": "Generate data by adversarial competition between networks",
+      "contextTitle": "Data Generation & Synthesis",
+      "contextDescription": "Creative studios and research labs use Generative Adversarial Networks to create synthetic data. A Generator network learns to produce realistic samples by competing against a Discriminator that tries to tell real from fake — the adversarial game drives both to improve until the generated data is indistinguishable from real.",
+      "contextExtra1": "Photorealistic image synthesis and style transfer",
+      "contextExtra2": "Data augmentation for training other ML models",
+      "contextExtra3": "Drug molecule design in pharmaceutical research",
+      "contextExtra4": "Video game asset and texture generation",
+      "contextExtra5": "Synthetic medical data for privacy-preserving research",
+      "contextExtra6": "Super-resolution image enhancement"
     },
     "rnn": {
       "name": "RNN",

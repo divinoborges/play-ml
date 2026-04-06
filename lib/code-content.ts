@@ -524,6 +524,73 @@ class SimpleRNN:
     def predict(self, X_seq):
         y, _ = self.forward(X_seq)
         return y`,
+
+  gan: `import numpy as np
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-np.clip(x, -500, 500)))
+
+def relu(x):
+    return np.maximum(0, x)
+
+
+class Generator:
+    def __init__(self, noise_dim=2, hidden_dim=16, output_dim=2):
+        scale = 0.1
+        self.W1 = np.random.randn(noise_dim, hidden_dim) * scale
+        self.b1 = np.zeros(hidden_dim)
+        self.W2 = np.random.randn(hidden_dim, output_dim) * scale
+        self.b2 = np.zeros(output_dim)
+
+    def forward(self, z):
+        self.h = relu(z @ self.W1 + self.b1)
+        return self.h @ self.W2 + self.b2
+
+    def generate(self, n_samples):
+        z = np.random.randn(n_samples, 2)
+        return self.forward(z)
+
+
+class Discriminator:
+    def __init__(self, input_dim=2, hidden_dim=16):
+        scale = 0.1
+        self.W1 = np.random.randn(input_dim, hidden_dim) * scale
+        self.b1 = np.zeros(hidden_dim)
+        self.W2 = np.random.randn(hidden_dim, 1) * scale
+        self.b2 = 0.0
+
+    def forward(self, x):
+        self.h = relu(x @ self.W1 + self.b1)
+        return sigmoid(self.h @ self.W2 + self.b2)
+
+
+def train_gan(real_data, epochs=500, lr=0.01):
+    G = Generator()
+    D = Discriminator()
+
+    for epoch in range(epochs):
+        batch_size = len(real_data)
+        noise = np.random.randn(batch_size, 2)
+        fake_data = G.forward(noise)
+
+        # --- Train Discriminator ---
+        d_real = D.forward(real_data)
+        d_fake = D.forward(fake_data)
+
+        d_loss = -np.mean(
+            np.log(d_real + 1e-10) + np.log(1 - d_fake + 1e-10)
+        )
+        # ... backprop and update D weights ...
+
+        # --- Train Generator ---
+        noise = np.random.randn(batch_size, 2)
+        fake_data = G.forward(noise)
+        d_fake = D.forward(fake_data)
+
+        g_loss = -np.mean(np.log(d_fake + 1e-10))
+        # ... backprop through D into G and update G weights ...
+
+    return G, D`,
 };
 
 export function getCodeContent(slug: string): string | null {

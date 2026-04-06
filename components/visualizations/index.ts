@@ -42,6 +42,10 @@ const visualizations: Record<string, ComponentType> = {
     () => import("./RNNViz"),
     { ssr: false },
   ),
+  gan: dynamic(
+    () => import("./GANViz"),
+    { ssr: false },
+  ),
 };
 
 export function getVisualization(slug: string): ComponentType | undefined {

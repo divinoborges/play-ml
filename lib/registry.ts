@@ -1,6 +1,6 @@
 export type AlgorithmCategory = "regression" | "classification" | "deepLearning" | "clustering";
 
-export type AlgorithmType = "regression" | "classification" | "clustering";
+export type AlgorithmType = "regression" | "classification" | "clustering" | "generative";
 
 export interface HyperparameterConfig {
   key: string;
@@ -308,6 +308,42 @@ export const algorithms: AlgorithmConfig[] = [
         min: 5,
         max: 30,
         step: 1,
+      },
+    ],
+  },
+  {
+    slug: "gan",
+    category: "deepLearning",
+    algorithmType: "generative",
+    datasetPath: "/datasets/gan.json",
+    color: "#8B5CF6",
+    hyperparameters: [
+      {
+        key: "epochs",
+        label: "Epochs",
+        type: "slider",
+        default: 500,
+        min: 100,
+        max: 2000,
+        step: 100,
+      },
+      {
+        key: "learningRate",
+        label: "Learning Rate",
+        type: "slider",
+        default: 0.01,
+        min: 0.001,
+        max: 0.1,
+        step: 0.001,
+      },
+      {
+        key: "hiddenUnits",
+        label: "Hidden Units",
+        type: "slider",
+        default: 16,
+        min: 8,
+        max: 64,
+        step: 8,
       },
     ],
   },
