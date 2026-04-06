@@ -10,6 +10,7 @@ import type { TrainResult, PredictionResult } from "@/lib/algorithms";
 import type {
   RegressionMetrics,
   ClassificationMetrics,
+  ClusteringMetrics,
   TrainingHistory,
 } from "@/components/shared/MetricsPanel";
 import { getVisualization } from "@/components/visualizations";
@@ -283,7 +284,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
               <>
                 <MetricsPanel
                   algorithmType={algorithm.algorithmType}
-                  metrics={trainResult.metrics as RegressionMetrics | ClassificationMetrics}
+                  metrics={trainResult.metrics as RegressionMetrics | ClassificationMetrics | ClusteringMetrics}
                   trainingTime={trainResult.trainingTime}
                   history={trainResult.history as TrainingHistory | undefined}
                 />
@@ -353,7 +354,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
                   )}
                   <div className="flex-1">
                     <p className="font-heading text-xs font-bold text-black uppercase mb-2">
-                      {t("sections.prediction")}
+                      {algorithm.algorithmType === "clustering" ? t("sections.clusterAssignment") : t("sections.prediction")}
                     </p>
                     <p className="font-heading text-display-md text-black">
                       {String(prediction.value)}

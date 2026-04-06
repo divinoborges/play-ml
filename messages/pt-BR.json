@@ -11,7 +11,8 @@
     "all": "Todos",
     "regression": "Regressão",
     "classification": "Classificação",
-    "deepLearning": "Deep Learning"
+    "deepLearning": "Deep Learning",
+    "clustering": "Agrupamento"
   },
   "sections": {
     "context": "Onde isso é usado?",
@@ -19,7 +20,8 @@
     "howItWorks": "Como Funciona",
     "training": "Treinar o Modelo",
     "prediction": "Testar o Modelo",
-    "metrics": "Como foi o desempenho?"
+    "metrics": "Como foi o desempenho?",
+    "clusterAssignment": "Atribuição de Cluster"
   },
   "actions": {
     "train": "Treinar Modelo",
@@ -53,7 +55,10 @@
     "f1": "F1-Score",
     "confusionMatrix": "Matriz de Confusão",
     "lossChart": "Perda do Treinamento",
-    "trainingTime": "Tempo de Treinamento"
+    "trainingTime": "Tempo de Treinamento",
+    "inertia": "Inércia (WCSS)",
+    "silhouetteScore": "Silhouette Score",
+    "numClusters": "Clusters"
   },
   "algorithms": {
     "linear-regression": {
@@ -151,6 +156,30 @@
       "contextExtra4": "Geração de código e autocompletação",
       "contextExtra5": "Análise de documentos jurídicos e revisão de contratos",
       "contextExtra6": "Sistemas de transcrição de voz para texto"
+    },
+    "kmeans": {
+      "name": "K-Means",
+      "summary": "Agrupe dados em clusters por similaridade",
+      "contextTitle": "Segmentação de Clientes",
+      "contextDescription": "Empresas de varejo usam K-Means para segmentar clientes com base em hábitos de compra, frequência de visitas e valores de compra. Ao descobrir grupos naturais nos dados, as empresas podem personalizar estratégias de marketing e promoções para cada segmento.",
+      "contextExtra1": "Quantização de cores e compressão de imagens",
+      "contextExtra2": "Agrupamento de documentos por tema para buscadores",
+      "contextExtra3": "Detecção de anomalias em padrões de tráfego de rede",
+      "contextExtra4": "Particionamento de zonas geográficas para rotas de entrega",
+      "contextExtra5": "Descoberta de padrões de expressão gênica em genômica",
+      "contextExtra6": "Segmentação de audiência em redes sociais"
+    },
+    "rnn": {
+      "name": "RNN",
+      "summary": "Preveja sequências aprendendo padrões temporais",
+      "contextTitle": "Previsão de Temperatura",
+      "contextDescription": "Estações meteorológicas usam Redes Neurais Recorrentes para prever a temperatura de amanhã com base em padrões históricos. A RNN processa uma sequência de temperaturas passadas, mantendo um estado oculto que captura tendências sazonais e flutuações de curto prazo.",
+      "contextExtra1": "Previsão de preços de ações e séries temporais financeiras",
+      "contextExtra2": "Reconhecimento de fala e síntese de voz",
+      "contextExtra3": "Geração e composição musical",
+      "contextExtra4": "Tradução automática (sequência para sequência)",
+      "contextExtra5": "Detecção de anomalias em fluxos de dados de sensores",
+      "contextExtra6": "Previsão de demanda energética para redes elétricas"
     }
   },
   "metricsPage": {

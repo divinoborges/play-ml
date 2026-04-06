@@ -215,6 +215,56 @@ const mathContent: Record<string, ReactNode> = {
       />
     </div>
   ),
+
+  kmeans: (
+    <div className="space-y-6">
+      <MathBlock
+        label="Objective Function (Minimize Inertia)"
+        formula="J = \sum_{i=1}^{m} \sum_{k=1}^{K} r_{ik} \| \mathbf{x}_i - \boldsymbol{\mu}_k \|^2"
+        note="Sum of squared distances from each point xᵢ to its assigned centroid μₖ. rᵢₖ = 1 if point i belongs to cluster k."
+      />
+      <MathBlock
+        label="Assignment Step"
+        formula="r_{ik} = \begin{cases} 1 & \text{if } k = \arg\min_j \| \mathbf{x}_i - \boldsymbol{\mu}_j \|^2 \\ 0 & \text{otherwise} \end{cases}"
+        note="Assign each point to the nearest centroid based on Euclidean distance."
+      />
+      <MathBlock
+        label="Update Step"
+        formula="\boldsymbol{\mu}_k = \frac{\sum_{i=1}^{m} r_{ik} \, \mathbf{x}_i}{\sum_{i=1}^{m} r_{ik}}"
+        note="Move each centroid to the mean of all points assigned to it."
+      />
+      <MathBlock
+        label="Silhouette Score"
+        formula="s(i) = \frac{b(i) - a(i)}{\max(a(i),\, b(i))}"
+        note="a(i) = mean distance to points in same cluster. b(i) = mean distance to nearest other cluster. Range: -1 to 1. Higher is better."
+      />
+    </div>
+  ),
+
+  rnn: (
+    <div className="space-y-6">
+      <MathBlock
+        label="Hidden State Update"
+        formula="\mathbf{h}_t = \tanh(\mathbf{W}_h \mathbf{h}_{t-1} + \mathbf{W}_x \mathbf{x}_t + \mathbf{b}_h)"
+        note="At each timestep t, the hidden state hₜ combines the previous hidden state hₜ₋₁ and current input xₜ through a tanh activation."
+      />
+      <MathBlock
+        label="Output"
+        formula="\hat{y}_t = \mathbf{W}_y \mathbf{h}_t + b_y"
+        note="The prediction at timestep t is a linear transformation of the hidden state. For time-series, only the final output is used."
+      />
+      <MathBlock
+        label="Loss Function (MSE)"
+        formula="L = \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2"
+        note="Mean Squared Error between predicted and actual next values in the sequence."
+      />
+      <MathBlock
+        label="Backpropagation Through Time (BPTT)"
+        formula="\frac{\partial L}{\partial \mathbf{W}_h} = \sum_{t=1}^{T} \frac{\partial L}{\partial \hat{y}_T} \frac{\partial \hat{y}_T}{\partial \mathbf{h}_T} \prod_{k=t+1}^{T} \frac{\partial \mathbf{h}_k}{\partial \mathbf{h}_{k-1}}"
+        note="Gradients flow backward through all timesteps. The product of Jacobians can cause vanishing/exploding gradients — a key RNN challenge."
+      />
+    </div>
+  ),
 };
 
 export function getMathContent(slug: string): ReactNode | null {

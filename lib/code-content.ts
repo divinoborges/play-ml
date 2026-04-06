@@ -403,6 +403,127 @@ class TransformerBlock:
         # Feed-forward + residual
         ff_out = np.maximum(0, X @ self.W1) @ self.W2
         return X + ff_out`,
+
+  kmeans: `import numpy as np
+
+class KMeans:
+    def __init__(self, k=3, max_iterations=100, tol=1e-4):
+        self.k = k
+        self.max_iterations = max_iterations
+        self.tol = tol
+        self.centroids = None
+
+    def fit(self, X):
+        n_samples = X.shape[0]
+
+        # Initialize centroids from random data points
+        indices = np.random.choice(n_samples, self.k, replace=False)
+        self.centroids = X[indices].copy()
+
+        for iteration in range(self.max_iterations):
+            # Assignment step: assign each point to nearest centroid
+            distances = np.linalg.norm(
+                X[:, np.newaxis] - self.centroids, axis=2
+            )
+            labels = np.argmin(distances, axis=1)
+
+            # Update step: move centroids to cluster means
+            new_centroids = np.array([
+                X[labels == k].mean(axis=0)
+                if np.sum(labels == k) > 0
+                else self.centroids[k]
+                for k in range(self.k)
+            ])
+
+            # Check convergence
+            shift = np.linalg.norm(new_centroids - self.centroids)
+            self.centroids = new_centroids
+
+            if shift < self.tol:
+                break
+
+        self.labels_ = labels
+        return self
+
+    def predict(self, X):
+        distances = np.linalg.norm(
+            X[:, np.newaxis] - self.centroids, axis=2
+        )
+        return np.argmin(distances, axis=1)
+
+    def inertia(self, X):
+        labels = self.predict(X)
+        return sum(
+            np.sum((X[labels == k] - self.centroids[k]) ** 2)
+            for k in range(self.k)
+        )`,
+
+  rnn: `import numpy as np
+
+class SimpleRNN:
+    def __init__(self, input_size, hidden_size, output_size=1, lr=0.01):
+        self.hidden_size = hidden_size
+        self.lr = lr
+
+        # Xavier initialization
+        scale = 0.1
+        self.Wx = np.random.randn(input_size, hidden_size) * scale
+        self.Wh = np.random.randn(hidden_size, hidden_size) * scale
+        self.Wy = np.random.randn(hidden_size, output_size) * scale
+        self.bh = np.zeros(hidden_size)
+        self.by = np.zeros(output_size)
+
+    def forward(self, X_seq):
+        """Forward pass through a sequence."""
+        T = len(X_seq)
+        h = np.zeros(self.hidden_size)
+        hiddens = [h]
+
+        for t in range(T):
+            h = np.tanh(X_seq[t] @ self.Wx + h @ self.Wh + self.bh)
+            hiddens.append(h)
+
+        y = hiddens[-1] @ self.Wy + self.by
+        return y, hiddens
+
+    def train_step(self, X_seq, y_true):
+        """One training step with BPTT."""
+        y_pred, hiddens = self.forward(X_seq)
+        error = y_pred - y_true
+        loss = 0.5 * np.sum(error ** 2)
+
+        # Backpropagation through time
+        dWy = hiddens[-1].reshape(-1, 1) @ error.reshape(1, -1)
+        dby = error
+        dh = (error @ self.Wy.T)
+
+        dWx = np.zeros_like(self.Wx)
+        dWh = np.zeros_like(self.Wh)
+        dbh = np.zeros_like(self.bh)
+
+        for t in range(len(X_seq), 0, -1):
+            dh_raw = dh * (1 - hiddens[t] ** 2)  # tanh derivative
+            dWx += X_seq[t-1].reshape(-1, 1) @ dh_raw.reshape(1, -1)
+            dWh += hiddens[t-1].reshape(-1, 1) @ dh_raw.reshape(1, -1)
+            dbh += dh_raw
+            dh = dh_raw @ self.Wh.T
+
+        # Gradient clipping
+        for grad in [dWx, dWh, dWy, dbh, dby]:
+            np.clip(grad, -1, 1, out=grad)
+
+        # Update weights
+        self.Wx -= self.lr * dWx
+        self.Wh -= self.lr * dWh
+        self.Wy -= self.lr * dWy
+        self.bh -= self.lr * dbh
+        self.by -= self.lr * dby
+
+        return loss
+
+    def predict(self, X_seq):
+        y, _ = self.forward(X_seq)
+        return y`,
 };
 
 export function getCodeContent(slug: string): string | null {

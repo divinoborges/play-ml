@@ -13,6 +13,7 @@ const categoryAccentColors: Record<AlgorithmCategory, string> = {
   regression: "bg-blue-electric",
   classification: "bg-lime-pop",
   deepLearning: "bg-magenta",
+  clustering: "bg-amber-400",
 };
 
 const categoryFilters: { key: AlgorithmCategory | "all"; labelKey: string }[] =
@@ -21,6 +22,7 @@ const categoryFilters: { key: AlgorithmCategory | "all"; labelKey: string }[] =
     { key: "regression", labelKey: "categories.regression" },
     { key: "classification", labelKey: "categories.classification" },
     { key: "deepLearning", labelKey: "categories.deepLearning" },
+    { key: "clustering", labelKey: "categories.clustering" },
   ];
 
 export default function AlgorithmCatalog() {

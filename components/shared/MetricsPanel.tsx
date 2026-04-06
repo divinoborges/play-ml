@@ -18,6 +18,12 @@ export interface ClassificationMetrics {
   confusionMatrix: number[][];
 }
 
+export interface ClusteringMetrics {
+  inertia: number;
+  silhouetteScore: number;
+  numClusters: number;
+}
+
 export interface TrainingHistory {
   loss: number[];
   valLoss?: number[];
@@ -25,7 +31,7 @@ export interface TrainingHistory {
 
 type MetricsPanelProps = {
   algorithmType: AlgorithmType;
-  metrics: RegressionMetrics | ClassificationMetrics | null;
+  metrics: RegressionMetrics | ClassificationMetrics | ClusteringMetrics | null;
   trainingTime?: number;
   history?: TrainingHistory;
 };
@@ -52,6 +58,11 @@ export default function MetricsPanel({
       {algorithmType === "regression" ? (
         <RegressionMetricsView
           metrics={metrics as RegressionMetrics}
+          t={t}
+        />
+      ) : algorithmType === "clustering" ? (
+        <ClusteringMetricsView
+          metrics={metrics as ClusteringMetrics}
           t={t}
         />
       ) : (
@@ -160,6 +171,37 @@ function ClassificationMetricsView({
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function ClusteringMetricsView({
+  metrics,
+  t,
+}: {
+  metrics: ClusteringMetrics;
+  t: ReturnType<typeof useTranslations>;
+}) {
+  const items = [
+    { key: "inertia" as const, value: metrics.inertia, format: (v: number) => v.toFixed(1) },
+    { key: "silhouetteScore" as const, value: metrics.silhouetteScore, format: (v: number) => v.toFixed(3) },
+    { key: "numClusters" as const, value: metrics.numClusters, format: (v: number) => String(v) },
+  ];
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      {items.map(({ key, value, format }) => (
+        <div key={key} className="flex flex-col items-center gap-2">
+          <div className="flex h-20 w-full items-center justify-center rounded-2xl bg-yellow-pop border-2 border-black">
+            <span className="font-heading text-display-sm text-black">
+              {format(value)}
+            </span>
+          </div>
+          <span className="rounded-full bg-sand px-4 py-1 font-heading text-xs font-bold text-black text-center">
+            {t(key)}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

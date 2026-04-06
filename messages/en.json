@@ -11,7 +11,8 @@
     "all": "All",
     "regression": "Regression",
     "classification": "Classification",
-    "deepLearning": "Deep Learning"
+    "deepLearning": "Deep Learning",
+    "clustering": "Clustering"
   },
   "sections": {
     "context": "Where is this used?",
@@ -19,7 +20,8 @@
     "howItWorks": "How It Works",
     "training": "Train the Model",
     "prediction": "Test the Model",
-    "metrics": "How did it perform?"
+    "metrics": "How did it perform?",
+    "clusterAssignment": "Cluster Assignment"
   },
   "actions": {
     "train": "Train Model",
@@ -53,7 +55,10 @@
     "f1": "F1-Score",
     "confusionMatrix": "Confusion Matrix",
     "lossChart": "Training Loss",
-    "trainingTime": "Training Time"
+    "trainingTime": "Training Time",
+    "inertia": "Inertia (WCSS)",
+    "silhouetteScore": "Silhouette Score",
+    "numClusters": "Clusters"
   },
   "algorithms": {
     "linear-regression": {
@@ -151,6 +156,30 @@
       "contextExtra4": "Code generation and autocompletion",
       "contextExtra5": "Legal document analysis and contract review",
       "contextExtra6": "Voice-to-text transcription systems"
+    },
+    "kmeans": {
+      "name": "K-Means",
+      "summary": "Group data into clusters by similarity",
+      "contextTitle": "Customer Segmentation",
+      "contextDescription": "Retail companies use K-Means clustering to segment customers based on spending habits, visit frequency, and purchase values. By discovering natural groups in the data, businesses can tailor marketing strategies and promotions to each segment.",
+      "contextExtra1": "Image color quantization and compression",
+      "contextExtra2": "Document topic grouping for search engines",
+      "contextExtra3": "Anomaly detection in network traffic patterns",
+      "contextExtra4": "Geographic zone partitioning for delivery routes",
+      "contextExtra5": "Gene expression pattern discovery in genomics",
+      "contextExtra6": "Social media audience segmentation"
+    },
+    "rnn": {
+      "name": "RNN",
+      "summary": "Predict sequences by learning temporal patterns",
+      "contextTitle": "Temperature Forecasting",
+      "contextDescription": "Weather stations use Recurrent Neural Networks to predict tomorrow's temperature based on historical patterns. The RNN processes a sequence of past temperatures, maintaining a hidden state that captures seasonal trends and short-term fluctuations.",
+      "contextExtra1": "Stock price and financial time-series prediction",
+      "contextExtra2": "Speech recognition and voice synthesis",
+      "contextExtra3": "Music generation and composition",
+      "contextExtra4": "Machine translation (sequence-to-sequence)",
+      "contextExtra5": "Anomaly detection in sensor data streams",
+      "contextExtra6": "Energy demand forecasting for power grids"
     }
   },
   "metricsPage": {

@@ -34,6 +34,14 @@ const visualizations: Record<string, ComponentType> = {
     () => import("./TransformersViz"),
     { ssr: false },
   ),
+  kmeans: dynamic(
+    () => import("./KMeansViz"),
+    { ssr: false },
+  ),
+  rnn: dynamic(
+    () => import("./RNNViz"),
+    { ssr: false },
+  ),
 };
 
 export function getVisualization(slug: string): ComponentType | undefined {

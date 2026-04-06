@@ -1,6 +1,6 @@
-export type AlgorithmCategory = "regression" | "classification" | "deepLearning";
+export type AlgorithmCategory = "regression" | "classification" | "deepLearning" | "clustering";
 
-export type AlgorithmType = "regression" | "classification";
+export type AlgorithmType = "regression" | "classification" | "clustering";
 
 export interface HyperparameterConfig {
   key: string;
@@ -235,6 +235,78 @@ export const algorithms: AlgorithmConfig[] = [
         default: 2,
         min: 1,
         max: 4,
+        step: 1,
+      },
+    ],
+  },
+  {
+    slug: "kmeans",
+    category: "clustering",
+    algorithmType: "clustering",
+    datasetPath: "/datasets/kmeans.json",
+    color: "#F59E0B",
+    hyperparameters: [
+      {
+        key: "k",
+        label: "K (Clusters)",
+        type: "slider",
+        default: 3,
+        min: 2,
+        max: 10,
+        step: 1,
+      },
+      {
+        key: "maxIterations",
+        label: "Max Iterations",
+        type: "slider",
+        default: 100,
+        min: 10,
+        max: 500,
+        step: 10,
+      },
+    ],
+  },
+  {
+    slug: "rnn",
+    category: "deepLearning",
+    algorithmType: "regression",
+    datasetPath: "/datasets/rnn.json",
+    color: "#8B5CF6",
+    hyperparameters: [
+      {
+        key: "epochs",
+        label: "Epochs",
+        type: "slider",
+        default: 10,
+        min: 1,
+        max: 30,
+        step: 1,
+      },
+      {
+        key: "learningRate",
+        label: "Learning Rate",
+        type: "slider",
+        default: 0.01,
+        min: 0.001,
+        max: 0.1,
+        step: 0.001,
+      },
+      {
+        key: "hiddenUnits",
+        label: "Hidden Units",
+        type: "slider",
+        default: 16,
+        min: 4,
+        max: 64,
+        step: 4,
+      },
+      {
+        key: "sequenceLength",
+        label: "Sequence Length",
+        type: "slider",
+        default: 10,
+        min: 5,
+        max: 30,
         step: 1,
       },
     ],

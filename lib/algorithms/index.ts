@@ -7,6 +7,8 @@ import { svm } from "./svm";
 import { randomForest } from "./random-forest";
 import { cnn } from "./cnn";
 import { transformers } from "./transformers";
+import { kmeans } from "./kmeans";
+import { rnn } from "./rnn";
 
 const modules: Record<string, AlgorithmModule> = {
   "linear-regression": linearRegression,
@@ -17,6 +19,8 @@ const modules: Record<string, AlgorithmModule> = {
   "random-forest": randomForest,
   cnn: cnn,
   transformers: transformers,
+  kmeans: kmeans,
+  rnn: rnn,
 };
 
 export function getAlgorithmModule(

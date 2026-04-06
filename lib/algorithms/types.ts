@@ -1,8 +1,8 @@
-import type { RegressionMetrics, ClassificationMetrics, TrainingHistory } from "@/components/shared/MetricsPanel";
+import type { RegressionMetrics, ClassificationMetrics, ClusteringMetrics, TrainingHistory } from "@/components/shared/MetricsPanel";
 
 export interface TrainResult {
   model: unknown;
-  metrics: RegressionMetrics | ClassificationMetrics;
+  metrics: RegressionMetrics | ClassificationMetrics | ClusteringMetrics;
   trainingTime: number;
   history?: TrainingHistory;
 }
@@ -32,5 +32,5 @@ export interface AlgorithmModule {
     testData: Record<string, number | string>[],
     features: string[],
     target: string,
-  ): RegressionMetrics | ClassificationMetrics;
+  ): RegressionMetrics | ClassificationMetrics | ClusteringMetrics;
 }

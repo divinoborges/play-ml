@@ -18,7 +18,8 @@ export default function DatasetTable({
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const data = tab === "train" ? dataset.trainData : dataset.testData;
-  const columns = [...dataset.features, dataset.target];
+  const hasTarget = data.length > 0 && data[0][dataset.target] !== undefined && data[0][dataset.target] !== "";
+  const columns = hasTarget ? [...dataset.features, dataset.target] : [...dataset.features];
 
   useEffect(() => {
     if (scrollRef.current) {
