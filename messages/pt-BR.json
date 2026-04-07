@@ -1,4 +1,20 @@
 {
+  "linearRegressionDatasets": {
+    "selectorLabel": "Dataset",
+    "targetLabel": "Prevendo",
+    "salary": {
+      "title": "Salário",
+      "description": "Um pequeno dataset clássico com 30 registros relacionando anos de experiência profissional ao salário anual. Ideal para entender regressão linear com uma única variável."
+    },
+    "graduate-admissions": {
+      "title": "Admissões de Pós-Graduação",
+      "description": "400 registros de candidatos a programas de pós-graduação com notas de GRE/TOEFL, rating da universidade, força de SOP/LOR, CGPA e experiência em pesquisa, usados para prever a chance de admissão."
+    },
+    "uber-fares": {
+      "title": "Tarifas Uber",
+      "description": "Uma amostra de corridas da Uber em Nova York com coordenadas de embarque/desembarque e número de passageiros, usada para prever o valor da tarifa em dólares."
+    }
+  },
   "common": {
     "appName": "PlayML",
     "tagline": "Aprenda Machine Learning na prática. Treine modelos, faça predições e entenda algoritmos — tudo no seu navegador.",
@@ -137,6 +153,18 @@
       "contextExtra4": "Detecção de intrusão em redes de cibersegurança",
       "contextExtra5": "Classificação de cobertura terrestre por imagens de satélite",
       "contextExtra6": "Manutenção preditiva para equipamentos industriais"
+    },
+    "naive-bayes": {
+      "name": "Naive Bayes",
+      "summary": "Classifique usando probabilidades e o teorema de Bayes",
+      "contextTitle": "Detecção de Spam",
+      "contextDescription": "Provedores de email usam Naive Bayes para decidir se uma mensagem recebida é spam. Estimando a probabilidade de cada palavra e característica aparecer em spam vs. email legítimo, o modelo atribui uma probabilidade a cada classe e escolhe a mais provável.",
+      "contextExtra1": "Detecção de spam e phishing em email",
+      "contextExtra2": "Classificação de tópicos de documentos (notícias, esportes, finanças)",
+      "contextExtra3": "Detecção de polaridade de sentimento em textos curtos",
+      "contextExtra4": "Identificação de idioma a partir de texto cru",
+      "contextExtra5": "Diagnóstico médico a partir de listas de sintomas",
+      "contextExtra6": "Moderação de conteúdo em tempo real em larga escala"
     },
     "cnn": {
       "name": "CNN",

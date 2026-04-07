@@ -46,6 +46,10 @@ const visualizations: Record<string, ComponentType> = {
     () => import("./GANViz"),
     { ssr: false },
   ),
+  "naive-bayes": dynamic(
+    () => import("./NaiveBayesViz"),
+    { ssr: false },
+  ),
 };
 
 export function getVisualization(slug: string): ComponentType | undefined {

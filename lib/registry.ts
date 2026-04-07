@@ -168,6 +168,24 @@ export const algorithms: AlgorithmConfig[] = [
     ],
   },
   {
+    slug: "naive-bayes",
+    category: "classification",
+    algorithmType: "classification",
+    datasetPath: "/datasets/naive-bayes.json",
+    color: "#10B981",
+    hyperparameters: [
+      {
+        key: "varSmoothing",
+        label: "Variance Smoothing",
+        type: "slider",
+        default: 1e-9,
+        min: 1e-12,
+        max: 1e-3,
+        step: 1e-12,
+      },
+    ],
+  },
+  {
     slug: "cnn",
     category: "deepLearning",
     algorithmType: "classification",

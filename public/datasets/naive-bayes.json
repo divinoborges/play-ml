@@ -1,0 +1,1422 @@
+{
+  "features": [
+    "word_freq_free",
+    "word_freq_money",
+    "num_exclamations",
+    "message_length"
+  ],
+  "target": "is_spam",
+  "trainData": [
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.1,
+      "num_exclamations": 4,
+      "message_length": 280,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.08,
+      "num_exclamations": 0,
+      "message_length": 290,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.5,
+      "word_freq_money": 0.94,
+      "num_exclamations": 7,
+      "message_length": 78,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.02,
+      "word_freq_money": 0.17,
+      "num_exclamations": 3,
+      "message_length": 255,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.73,
+      "word_freq_money": 0.8,
+      "num_exclamations": 3,
+      "message_length": 47,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 294,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.46,
+      "word_freq_money": 0.42,
+      "num_exclamations": 6,
+      "message_length": 129,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.63,
+      "word_freq_money": 0.58,
+      "num_exclamations": 11,
+      "message_length": 118,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.01,
+      "word_freq_money": 0.13,
+      "num_exclamations": 0,
+      "message_length": 125,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.26,
+      "word_freq_money": 0.54,
+      "num_exclamations": 6,
+      "message_length": 108,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.45,
+      "word_freq_money": 0.5,
+      "num_exclamations": 4,
+      "message_length": 111,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.05,
+      "num_exclamations": 1,
+      "message_length": 138,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.25,
+      "word_freq_money": 0.32,
+      "num_exclamations": 6,
+      "message_length": 127,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.62,
+      "word_freq_money": 0.54,
+      "num_exclamations": 6,
+      "message_length": 90,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.51,
+      "word_freq_money": 0.25,
+      "num_exclamations": 6,
+      "message_length": 46,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 189,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.44,
+      "num_exclamations": 1,
+      "message_length": 28,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.31,
+      "word_freq_money": 0.12,
+      "num_exclamations": 6,
+      "message_length": 133,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.06,
+      "num_exclamations": 1,
+      "message_length": 192,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.63,
+      "word_freq_money": 0.84,
+      "num_exclamations": 7,
+      "message_length": 98,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.69,
+      "word_freq_money": 0.5,
+      "num_exclamations": 9,
+      "message_length": 86,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.02,
+      "word_freq_money": 0.07,
+      "num_exclamations": 3,
+      "message_length": 195,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.25,
+      "word_freq_money": 0.78,
+      "num_exclamations": 4,
+      "message_length": 60,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.06,
+      "num_exclamations": 0,
+      "message_length": 148,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.13,
+      "word_freq_money": 0.05,
+      "num_exclamations": 0,
+      "message_length": 151,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.39,
+      "word_freq_money": 0.63,
+      "num_exclamations": 0,
+      "message_length": 81,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.32,
+      "word_freq_money": 0.83,
+      "num_exclamations": 10,
+      "message_length": 34,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.53,
+      "word_freq_money": 0.56,
+      "num_exclamations": 8,
+      "message_length": 104,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.1,
+      "word_freq_money": 0.14,
+      "num_exclamations": 1,
+      "message_length": 122,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.41,
+      "word_freq_money": 0.46,
+      "num_exclamations": 2,
+      "message_length": 96,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.2,
+      "word_freq_money": 0.39,
+      "num_exclamations": 4,
+      "message_length": 111,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.27,
+      "word_freq_money": 0.56,
+      "num_exclamations": 4,
+      "message_length": 117,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.3,
+      "word_freq_money": 0.46,
+      "num_exclamations": 6,
+      "message_length": 158,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.55,
+      "word_freq_money": 0.96,
+      "num_exclamations": 3,
+      "message_length": 73,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.55,
+      "word_freq_money": 0.77,
+      "num_exclamations": 2,
+      "message_length": 141,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.66,
+      "word_freq_money": 0.43,
+      "num_exclamations": 7,
+      "message_length": 123,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.54,
+      "num_exclamations": 8,
+      "message_length": 37,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.81,
+      "word_freq_money": 0.25,
+      "num_exclamations": 5,
+      "message_length": 92,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.15,
+      "word_freq_money": 0.05,
+      "num_exclamations": 0,
+      "message_length": 148,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 167,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.48,
+      "word_freq_money": 0.51,
+      "num_exclamations": 8,
+      "message_length": 85,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.18,
+      "word_freq_money": 0.55,
+      "num_exclamations": 9,
+      "message_length": 98,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.46,
+      "word_freq_money": 0.33,
+      "num_exclamations": 5,
+      "message_length": 64,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.28,
+      "word_freq_money": 0.07,
+      "num_exclamations": 4,
+      "message_length": 54,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.06,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 140,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.13,
+      "num_exclamations": 2,
+      "message_length": 216,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.02,
+      "word_freq_money": 0.09,
+      "num_exclamations": 1,
+      "message_length": 168,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.81,
+      "word_freq_money": 0.01,
+      "num_exclamations": 8,
+      "message_length": 114,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.48,
+      "word_freq_money": 0.09,
+      "num_exclamations": 5,
+      "message_length": 65,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.08,
+      "num_exclamations": 2,
+      "message_length": 158,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.1,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 159,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.53,
+      "word_freq_money": 0.55,
+      "num_exclamations": 8,
+      "message_length": 143,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.37,
+      "word_freq_money": 0.43,
+      "num_exclamations": 5,
+      "message_length": 90,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.33,
+      "word_freq_money": 0.65,
+      "num_exclamations": 5,
+      "message_length": 50,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.11,
+      "num_exclamations": 2,
+      "message_length": 243,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.08,
+      "num_exclamations": 1,
+      "message_length": 266,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.05,
+      "num_exclamations": 0,
+      "message_length": 121,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.28,
+      "word_freq_money": 0.33,
+      "num_exclamations": 8,
+      "message_length": 84,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.08,
+      "num_exclamations": 2,
+      "message_length": 287,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 215,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.01,
+      "num_exclamations": 0,
+      "message_length": 217,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.07,
+      "num_exclamations": 2,
+      "message_length": 69,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.11,
+      "word_freq_money": 0.1,
+      "num_exclamations": 2,
+      "message_length": 38,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.08,
+      "num_exclamations": 0,
+      "message_length": 276,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 371,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.03,
+      "num_exclamations": 2,
+      "message_length": 144,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.06,
+      "num_exclamations": 2,
+      "message_length": 151,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.11,
+      "word_freq_money": 0.04,
+      "num_exclamations": 1,
+      "message_length": 206,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.59,
+      "word_freq_money": 0.65,
+      "num_exclamations": 7,
+      "message_length": 95,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.54,
+      "word_freq_money": 0.12,
+      "num_exclamations": 4,
+      "message_length": 99,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0,
+      "num_exclamations": 1,
+      "message_length": 216,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 285,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.09,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 156,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.41,
+      "num_exclamations": 7,
+      "message_length": 75,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.43,
+      "word_freq_money": 0.83,
+      "num_exclamations": 2,
+      "message_length": 180,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.05,
+      "num_exclamations": 2,
+      "message_length": 52,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.57,
+      "word_freq_money": 0.55,
+      "num_exclamations": 9,
+      "message_length": 129,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.07,
+      "num_exclamations": 2,
+      "message_length": 156,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.11,
+      "num_exclamations": 1,
+      "message_length": 257,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.32,
+      "word_freq_money": 0.69,
+      "num_exclamations": 7,
+      "message_length": 96,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0,
+      "num_exclamations": 3,
+      "message_length": 223,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.62,
+      "word_freq_money": 0.17,
+      "num_exclamations": 10,
+      "message_length": 110,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.01,
+      "word_freq_money": 0.05,
+      "num_exclamations": 0,
+      "message_length": 149,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.1,
+      "word_freq_money": 0.82,
+      "num_exclamations": 6,
+      "message_length": 100,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.12,
+      "word_freq_money": 0.48,
+      "num_exclamations": 6,
+      "message_length": 100,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.06,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 247,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.61,
+      "word_freq_money": 0.22,
+      "num_exclamations": 5,
+      "message_length": 71,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.45,
+      "word_freq_money": 0.74,
+      "num_exclamations": 3,
+      "message_length": 65,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.06,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 236,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0,
+      "num_exclamations": 2,
+      "message_length": 162,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.1,
+      "num_exclamations": 1,
+      "message_length": 149,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.69,
+      "word_freq_money": 0.56,
+      "num_exclamations": 2,
+      "message_length": 92,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.74,
+      "word_freq_money": 0.36,
+      "num_exclamations": 3,
+      "message_length": 122,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.56,
+      "word_freq_money": 0.48,
+      "num_exclamations": 5,
+      "message_length": 85,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.33,
+      "word_freq_money": 0.23,
+      "num_exclamations": 8,
+      "message_length": 66,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.47,
+      "word_freq_money": 0,
+      "num_exclamations": 8,
+      "message_length": 99,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.29,
+      "num_exclamations": 9,
+      "message_length": 54,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.02,
+      "num_exclamations": 1,
+      "message_length": 133,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.2,
+      "word_freq_money": 0.75,
+      "num_exclamations": 7,
+      "message_length": 99,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.31,
+      "num_exclamations": 4,
+      "message_length": 30,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 220,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 226,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.15,
+      "num_exclamations": 2,
+      "message_length": 291,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.4,
+      "word_freq_money": 0.32,
+      "num_exclamations": 6,
+      "message_length": 97,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.11,
+      "num_exclamations": 0,
+      "message_length": 209,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 133,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.44,
+      "word_freq_money": 0.67,
+      "num_exclamations": 5,
+      "message_length": 61,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.02,
+      "word_freq_money": 0,
+      "num_exclamations": 2,
+      "message_length": 133,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 248,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.06,
+      "word_freq_money": 0.07,
+      "num_exclamations": 2,
+      "message_length": 209,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.54,
+      "word_freq_money": 0.9,
+      "num_exclamations": 8,
+      "message_length": 68,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.61,
+      "word_freq_money": 0.57,
+      "num_exclamations": 9,
+      "message_length": 74,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.45,
+      "word_freq_money": 0.44,
+      "num_exclamations": 4,
+      "message_length": 72,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.41,
+      "word_freq_money": 0.84,
+      "num_exclamations": 8,
+      "message_length": 93,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.4,
+      "word_freq_money": 0.39,
+      "num_exclamations": 7,
+      "message_length": 73,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.01,
+      "num_exclamations": 1,
+      "message_length": 244,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.62,
+      "word_freq_money": 0.53,
+      "num_exclamations": 7,
+      "message_length": 51,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.41,
+      "num_exclamations": 8,
+      "message_length": 86,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.14,
+      "num_exclamations": 0,
+      "message_length": 205,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.43,
+      "word_freq_money": 0.85,
+      "num_exclamations": 10,
+      "message_length": 121,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.1,
+      "word_freq_money": 0.74,
+      "num_exclamations": 10,
+      "message_length": 68,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.19,
+      "word_freq_money": 0.03,
+      "num_exclamations": 0,
+      "message_length": 232,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.35,
+      "word_freq_money": 0.47,
+      "num_exclamations": 9,
+      "message_length": 51,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.08,
+      "num_exclamations": 0,
+      "message_length": 251,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.13,
+      "num_exclamations": 0,
+      "message_length": 142,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 227,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.34,
+      "num_exclamations": 12,
+      "message_length": 113,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 157,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.08,
+      "num_exclamations": 1,
+      "message_length": 185,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.06,
+      "num_exclamations": 1,
+      "message_length": 148,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.5,
+      "word_freq_money": 0.11,
+      "num_exclamations": 8,
+      "message_length": 135,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.23,
+      "word_freq_money": 0.29,
+      "num_exclamations": 2,
+      "message_length": 57,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 109,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.37,
+      "word_freq_money": 0.21,
+      "num_exclamations": 6,
+      "message_length": 91,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.21,
+      "word_freq_money": 0.54,
+      "num_exclamations": 7,
+      "message_length": 49,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.42,
+      "word_freq_money": 0.54,
+      "num_exclamations": 0,
+      "message_length": 103,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.39,
+      "word_freq_money": 1.05,
+      "num_exclamations": 7,
+      "message_length": 52,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.4,
+      "word_freq_money": 0.44,
+      "num_exclamations": 6,
+      "message_length": 72,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.21,
+      "word_freq_money": 0.6,
+      "num_exclamations": 8,
+      "message_length": 59,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.29,
+      "word_freq_money": 0.35,
+      "num_exclamations": 4,
+      "message_length": 66,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.03,
+      "num_exclamations": 0,
+      "message_length": 192,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.12,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 198,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.09,
+      "word_freq_money": 0.08,
+      "num_exclamations": 1,
+      "message_length": 152,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.19,
+      "num_exclamations": 1,
+      "message_length": 218,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.47,
+      "word_freq_money": 0.2,
+      "num_exclamations": 11,
+      "message_length": 102,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.79,
+      "word_freq_money": 0.31,
+      "num_exclamations": 7,
+      "message_length": 154,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0,
+      "num_exclamations": 0,
+      "message_length": 263,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.19,
+      "word_freq_money": 0.13,
+      "num_exclamations": 8,
+      "message_length": 61,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.59,
+      "word_freq_money": 0.66,
+      "num_exclamations": 0,
+      "message_length": 147,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.14,
+      "num_exclamations": 1,
+      "message_length": 123,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.08,
+      "num_exclamations": 0,
+      "message_length": 121,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.17,
+      "word_freq_money": 0.71,
+      "num_exclamations": 11,
+      "message_length": 63,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.45,
+      "word_freq_money": 0.32,
+      "num_exclamations": 4,
+      "message_length": 66,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.06,
+      "num_exclamations": 3,
+      "message_length": 305,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.01,
+      "word_freq_money": 0.1,
+      "num_exclamations": 1,
+      "message_length": 301,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.07,
+      "num_exclamations": 0,
+      "message_length": 77,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.01,
+      "word_freq_money": 0.15,
+      "num_exclamations": 1,
+      "message_length": 210,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.56,
+      "word_freq_money": 0.11,
+      "num_exclamations": 9,
+      "message_length": 78,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.29,
+      "word_freq_money": 0.06,
+      "num_exclamations": 8,
+      "message_length": 41,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.15,
+      "word_freq_money": 0.54,
+      "num_exclamations": 2,
+      "message_length": 84,
+      "is_spam": 1
+    }
+  ],
+  "testData": [
+    {
+      "word_freq_free": 0.39,
+      "word_freq_money": 0.4,
+      "num_exclamations": 3,
+      "message_length": 64,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.14,
+      "num_exclamations": 1,
+      "message_length": 142,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.03,
+      "word_freq_money": 0.02,
+      "num_exclamations": 0,
+      "message_length": 194,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.1,
+      "num_exclamations": 1,
+      "message_length": 141,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.16,
+      "word_freq_money": 0.43,
+      "num_exclamations": 8,
+      "message_length": 22,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.06,
+      "num_exclamations": 1,
+      "message_length": 130,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.1,
+      "num_exclamations": 2,
+      "message_length": 161,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.57,
+      "word_freq_money": 0.71,
+      "num_exclamations": 7,
+      "message_length": 65,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.08,
+      "num_exclamations": 1,
+      "message_length": 194,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.06,
+      "word_freq_money": 0.16,
+      "num_exclamations": 1,
+      "message_length": 122,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0,
+      "num_exclamations": 6,
+      "message_length": 85,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.25,
+      "word_freq_money": 0.58,
+      "num_exclamations": 6,
+      "message_length": 80,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.14,
+      "word_freq_money": 0.19,
+      "num_exclamations": 6,
+      "message_length": 72,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.1,
+      "num_exclamations": 1,
+      "message_length": 278,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.07,
+      "num_exclamations": 2,
+      "message_length": 258,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.3,
+      "word_freq_money": 0.34,
+      "num_exclamations": 4,
+      "message_length": 68,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.31,
+      "word_freq_money": 0.32,
+      "num_exclamations": 6,
+      "message_length": 32,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.05,
+      "num_exclamations": 1,
+      "message_length": 264,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.06,
+      "num_exclamations": 1,
+      "message_length": 105,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0,
+      "num_exclamations": 2,
+      "message_length": 168,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.01,
+      "num_exclamations": 1,
+      "message_length": 180,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0.09,
+      "num_exclamations": 1,
+      "message_length": 212,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.02,
+      "word_freq_money": 0.04,
+      "num_exclamations": 3,
+      "message_length": 186,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.57,
+      "word_freq_money": 0.39,
+      "num_exclamations": 4,
+      "message_length": 129,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.33,
+      "num_exclamations": 7,
+      "message_length": 101,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.06,
+      "num_exclamations": 1,
+      "message_length": 208,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.18,
+      "word_freq_money": 0.63,
+      "num_exclamations": 5,
+      "message_length": 124,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.08,
+      "num_exclamations": 0,
+      "message_length": 80,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.1,
+      "num_exclamations": 1,
+      "message_length": 253,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.08,
+      "word_freq_money": 0.04,
+      "num_exclamations": 1,
+      "message_length": 189,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.58,
+      "word_freq_money": 0.06,
+      "num_exclamations": 5,
+      "message_length": 96,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0,
+      "word_freq_money": 0.12,
+      "num_exclamations": 3,
+      "message_length": 135,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.07,
+      "word_freq_money": 0.04,
+      "num_exclamations": 1,
+      "message_length": 210,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.15,
+      "word_freq_money": 0.04,
+      "num_exclamations": 0,
+      "message_length": 134,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.13,
+      "word_freq_money": 0,
+      "num_exclamations": 1,
+      "message_length": 197,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.31,
+      "word_freq_money": 0.61,
+      "num_exclamations": 4,
+      "message_length": 27,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.04,
+      "word_freq_money": 0,
+      "num_exclamations": 2,
+      "message_length": 304,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.01,
+      "word_freq_money": 0.07,
+      "num_exclamations": 2,
+      "message_length": 221,
+      "is_spam": 0
+    },
+    {
+      "word_freq_free": 0.4,
+      "word_freq_money": 0.28,
+      "num_exclamations": 3,
+      "message_length": 92,
+      "is_spam": 1
+    },
+    {
+      "word_freq_free": 0.05,
+      "word_freq_money": 0.02,
+      "num_exclamations": 0,
+      "message_length": 253,
+      "is_spam": 0
+    }
+  ],
+  "metadata": {
+    "description": "Synthetic spam-detection dataset with ~200 samples. Each row represents an email with numeric features: word frequencies for \"free\" and \"money\", number of exclamation marks, and total message length. The target is whether the email is spam (1) or ham (0).",
+    "featureDescriptions": {
+      "word_freq_free": "Frequency of the word \"free\" in the message (0-1).",
+      "word_freq_money": "Frequency of the word \"money\" in the message (0-1).",
+      "num_exclamations": "Number of exclamation marks in the message.",
+      "message_length": "Total character length of the message."
+    }
+  }
+}

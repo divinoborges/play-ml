@@ -1,20 +1,14 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Tech stack: Next.js 16, React 19, TypeScript, TailwindCSS 4, D3.js
+  We use conventional commits (feat, fix, refactor, docs, ci, etc.)
+  Domain: educational ML platform (PlayML)
+  i18n: en + pt-BR via next-intl
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  tasks:
+    - Always include a final task group for committing changes
+    - The final group must create atomic commits using conventional commits format
+    - Each logical change should be a separate commit (e.g., one per algorithm, one per feature)
+    - "Example: ## N. Commit\n- [ ] N.1 Create atomic commit(s) using conventional commits (e.g., feat: add X algorithm)"

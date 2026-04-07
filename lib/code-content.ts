@@ -1,35 +1,26 @@
 const codeContent: Record<string, string> = {
-  "linear-regression": `import numpy as np
+  "linear-regression": `import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 
-class LinearRegression:
-    def __init__(self, learning_rate=0.01, iterations=1000):
-        self.lr = learning_rate
-        self.iterations = iterations
-        self.weights = None
-        self.bias = None
+# Load Data
+df = pd.read_csv("salary.csv")
+X = df[["YearsExperience"]]
+y = df["Salary"]
 
-    def fit(self, X, y):
-        n_samples, n_features = X.shape
-        self.weights = np.zeros(n_features)
-        self.bias = 0
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
 
-        for _ in range(self.iterations):
-            y_pred = X @ self.weights + self.bias
+# Build a Linear Regression Model
+model = LinearRegression()
+model.fit(X_train, y_train)
 
-            dw = (1 / n_samples) * (X.T @ (y_pred - y))
-            db = (1 / n_samples) * np.sum(y_pred - y)
-
-            self.weights -= self.lr * dw
-            self.bias -= self.lr * db
-
-    def predict(self, X):
-        return X @ self.weights + self.bias
-
-    def r2_score(self, X, y):
-        y_pred = self.predict(X)
-        ss_res = np.sum((y - y_pred) ** 2)
-        ss_tot = np.sum((y - np.mean(y)) ** 2)
-        return 1 - (ss_res / ss_tot)`,
+# Predict using the Model
+y_pred = model.predict(X_test)
+score = r2_score(y_test, y_pred)
+print(f"R² Score: {score:.4f}")`,
 
   "logistic-regression": `import numpy as np
 
@@ -593,6 +584,92 @@ def train_gan(real_data, epochs=500, lr=0.01):
     return G, D`,
 };
 
-export function getCodeContent(slug: string): string | null {
+codeContent["naive-bayes"] = `import pandas as pd
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load data
+df = pd.read_csv("spam.csv")
+features = ["word_freq_free", "word_freq_money", "num_exclamations", "message_length"]
+X = df[features]
+y = df["is_spam"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Train Gaussian Naive Bayes
+model = GaussianNB(var_smoothing=1e-9)
+model.fit(X_train, y_train)
+
+# Predict and evaluate
+y_pred = model.predict(X_test)
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")`;
+
+const linearRegressionVariants: Record<string, string> = {
+  salary: codeContent["linear-regression"],
+  "graduate-admissions": `import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+# Load Data
+df = pd.read_csv("graduate-admissions.csv")
+features = [
+    "GRE Score", "TOEFL Score", "University Rating",
+    "SOP", "LOR ", "CGPA", "Research",
+]
+X = df[features]
+y = df["Chance of Admit "]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Build a Linear Regression Model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict using the Model
+y_pred = model.predict(X_test)
+score = r2_score(y_test, y_pred)
+print(f"R² Score: {score:.4f}")`,
+  "uber-fares": `import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+# Load Data
+df = pd.read_csv("uber-fares.csv")
+df = df.dropna()
+df = df[(df["fare_amount"] > 0) & (df["fare_amount"] < 200)]
+
+features = [
+    "pickup_longitude", "pickup_latitude",
+    "dropoff_longitude", "dropoff_latitude",
+    "passenger_count",
+]
+X = df[features]
+y = df["fare_amount"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Build a Linear Regression Model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict using the Model
+y_pred = model.predict(X_test)
+score = r2_score(y_test, y_pred)
+print(f"R² Score: {score:.4f}")`,
+};
+
+export function getCodeContent(slug: string, variant?: string): string | null {
+  if (slug === "linear-regression" && variant && variant in linearRegressionVariants) {
+    return linearRegressionVariants[variant];
+  }
   return codeContent[slug] ?? null;
 }

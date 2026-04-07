@@ -1,4 +1,20 @@
 {
+  "linearRegressionDatasets": {
+    "selectorLabel": "Dataset",
+    "targetLabel": "Predicting",
+    "salary": {
+      "title": "Salary",
+      "description": "A small classic dataset with 30 records mapping years of professional experience to annual salary. Ideal for understanding single-variable linear regression."
+    },
+    "graduate-admissions": {
+      "title": "Graduate Admissions",
+      "description": "400 records of graduate school applicants with GRE/TOEFL scores, university rating, SOP/LOR strength, CGPA and research experience, used to predict the chance of admission."
+    },
+    "uber-fares": {
+      "title": "Uber Fares",
+      "description": "A sample of Uber trips in New York City with pickup/dropoff coordinates and passenger count, used to predict the fare amount in USD."
+    }
+  },
   "common": {
     "appName": "PlayML",
     "tagline": "Learn Machine Learning by doing. Train models, make predictions, and understand algorithms — all in your browser.",
@@ -137,6 +153,18 @@
       "contextExtra4": "Network intrusion detection in cybersecurity",
       "contextExtra5": "Land cover classification from satellite imagery",
       "contextExtra6": "Predictive maintenance for industrial equipment"
+    },
+    "naive-bayes": {
+      "name": "Naive Bayes",
+      "summary": "Classify using probabilities and Bayes' theorem",
+      "contextTitle": "Spam Detection",
+      "contextDescription": "Email providers use Naive Bayes to decide whether an incoming message is spam. By estimating how likely each word and feature is to appear in spam vs. legitimate mail, the model assigns a probability to each class and picks the most likely one.",
+      "contextExtra1": "Spam and phishing detection in email",
+      "contextExtra2": "Document topic classification (news, sports, finance)",
+      "contextExtra3": "Sentiment polarity detection on short texts",
+      "contextExtra4": "Language identification from raw text",
+      "contextExtra5": "Medical diagnosis from symptom checklists",
+      "contextExtra6": "Real-time content moderation at scale"
     },
     "cnn": {
       "name": "CNN",

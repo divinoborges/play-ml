@@ -290,6 +290,31 @@ const mathContent: Record<string, ReactNode> = {
       />
     </div>
   ),
+
+  "naive-bayes": (
+    <div className="space-y-6">
+      <MathBlock
+        label="Bayes' Theorem"
+        formula="P(y \mid \mathbf{x}) = \frac{P(\mathbf{x} \mid y) \, P(y)}{P(\mathbf{x})}"
+        note="Posterior = (Likelihood × Prior) / Evidence. Naive Bayes ranks classes by posterior probability."
+      />
+      <MathBlock
+        label="Naive Independence Assumption"
+        formula="P(\mathbf{x} \mid y) = \prod_{i=1}^{n} P(x_i \mid y)"
+        note="Assumes features are conditionally independent given the class — a strong (naive) simplification that works surprisingly well in practice."
+      />
+      <MathBlock
+        label="Gaussian Likelihood"
+        formula="P(x_i \mid y) = \frac{1}{\sqrt{2\pi\sigma_{y,i}^2}} \exp\!\left(-\frac{(x_i - \mu_{y,i})^2}{2\sigma_{y,i}^2}\right)"
+        note="Each feature is modeled as a Gaussian with class-specific mean μ and variance σ². Parameters are estimated from the training data."
+      />
+      <MathBlock
+        label="Decision Rule (in log-space)"
+        formula="\hat{y} = \underset{y}{\arg\max} \; \log P(y) + \sum_{i=1}^{n} \log P(x_i \mid y)"
+        note="Log-space avoids numerical underflow when multiplying many small probabilities."
+      />
+    </div>
+  ),
 };
 
 export function getMathContent(slug: string): ReactNode | null {

@@ -28,6 +28,12 @@ import BrowserFrame from "@/components/shared/BrowserFrame";
 import PythonHighlighter from "@/components/shared/PythonHighlighter";
 import { getMathContent } from "@/lib/math-content";
 import { getCodeContent } from "@/lib/code-content";
+import LinearRegressionDatasetSelector from "@/components/shared/LinearRegressionDatasetSelector";
+import {
+  DEFAULT_LR_DATASET_ID,
+  loadLRDataset,
+  type LRDatasetId,
+} from "@/lib/linear-regression-datasets";
 
 interface Props {
   algorithm: AlgorithmConfig;
@@ -55,13 +61,32 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
   const [mathExpanded, setMathExpanded] = useState(false);
   const [codeExpanded, setCodeExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [lrDatasetId, setLrDatasetId] = useState<LRDatasetId>(DEFAULT_LR_DATASET_ID);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${algorithm.datasetPath}`)
-      .then((r) => r.json())
-      .then(setDataset)
-      .catch(console.error);
-  }, [algorithm.datasetPath]);
+    let cancelled = false;
+    if (slug === "linear-regression") {
+      setDataset(null);
+      setTrainResult(null);
+      setPrediction(null);
+      setPredictionInputs({});
+      loadLRDataset(lrDatasetId)
+        .then((d) => {
+          if (!cancelled) setDataset(d);
+        })
+        .catch(console.error);
+    } else {
+      fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${algorithm.datasetPath}`)
+        .then((r) => r.json())
+        .then((d) => {
+          if (!cancelled) setDataset(d);
+        })
+        .catch(console.error);
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, [algorithm.datasetPath, slug, lrDatasetId]);
 
   const handleTrain = useCallback(async () => {
     if (!dataset) return;
@@ -189,6 +214,12 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
           <h2 className="font-heading text-display-sm uppercase text-black mb-6">
             {t("sections.dataset")}
           </h2>
+          {slug === "linear-regression" && (
+            <LinearRegressionDatasetSelector
+              value={lrDatasetId}
+              onChange={setLrDatasetId}
+            />
+          )}
           {slug === "cnn" && dataset.metadata && "imageSize" in dataset.metadata ? (
             <ImageGrid
               trainData={dataset.trainData}
@@ -243,7 +274,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
             <div className="mt-3 rounded-2xl border-2 border-[#44475A] bg-[#282A36] p-6 relative">
               <button
                 onClick={() => {
-                  const code = getCodeContent(slug);
+                  const code = getCodeContent(slug, lrDatasetId);
                   if (code) {
                     navigator.clipboard.writeText(code);
                     setCopied(true);
@@ -254,7 +285,7 @@ export default function AlgorithmPageClient({ algorithm }: Props) {
               >
                 {copied ? t("actions.copied") : t("actions.copy")}
               </button>
-              <PythonHighlighter code={getCodeContent(slug) ?? ""} />
+              <PythonHighlighter code={getCodeContent(slug, lrDatasetId) ?? ""} />
             </div>
           )}
         </div>

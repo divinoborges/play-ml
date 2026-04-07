@@ -10,6 +10,7 @@ import { transformers } from "./transformers";
 import { kmeans } from "./kmeans";
 import { rnn } from "./rnn";
 import { gan } from "./gan";
+import { naiveBayes } from "./naive-bayes";
 
 const modules: Record<string, AlgorithmModule> = {
   "linear-regression": linearRegression,
@@ -23,6 +24,7 @@ const modules: Record<string, AlgorithmModule> = {
   kmeans: kmeans,
   rnn: rnn,
   gan: gan,
+  "naive-bayes": naiveBayes,
 };
 
 export function getAlgorithmModule(
