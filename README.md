@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Replace with Neo-Pop styled banner image -->
-  <img src="./public/images/play-ml-banner.png" alt="PlayML" width="600" />
+  <img src="./public/images/play-ml-banner.png" alt="PlayML" />
 </p>
 
 <p align="center">

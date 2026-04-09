@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import AlgorithmCatalog from "@/components/shared/AlgorithmCatalog";
+import HeroBackdrop from "@/components/shared/HeroBackdrop";
 
 export default async function HomePage(props: PageProps<"/[locale]">) {
   const { locale } = await props.params;
@@ -14,10 +15,11 @@ function HomeContent() {
 
   return (
     <div>
-      {/* Hero Section — Black background */}
-      <section className="bg-black px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="font-heading text-display-xl uppercase tracking-tight text-white">
+      {/* Hero Section — Decorative ML-themed backdrop */}
+      <section className="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+        <HeroBackdrop />
+        <div className="relative z-10 mx-auto max-w-4xl">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white">
             {t("common.appName")}
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/70 font-body max-w-3xl mx-auto leading-relaxed">
