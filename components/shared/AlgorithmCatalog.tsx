@@ -36,8 +36,23 @@ export default function AlgorithmCatalog() {
 
   return (
     <div>
-      {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      {/* Filter – mobile select */}
+      <select
+        value={filter}
+        onChange={(e) =>
+          setFilter(e.target.value as AlgorithmCategory | "all")
+        }
+        className="md:hidden mb-8 w-full appearance-none rounded-full border-2 border-black bg-sand-light px-5 py-2 font-heading text-sm font-bold uppercase"
+      >
+        {categoryFilters.map(({ key, labelKey }) => (
+          <option key={key} value={key}>
+            {t(labelKey)}
+          </option>
+        ))}
+      </select>
+
+      {/* Filter – desktop buttons */}
+      <div className="hidden md:flex flex-wrap gap-2 mb-8">
         {categoryFilters.map(({ key, labelKey }) => (
           <button
             key={key}
