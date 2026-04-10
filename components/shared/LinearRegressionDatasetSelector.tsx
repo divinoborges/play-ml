@@ -17,8 +17,19 @@ export default function LinearRegressionDatasetSelector({ value, onChange }: Pro
       <p className="font-heading text-xs font-bold text-black uppercase mb-2">
         {t("linearRegressionDatasets.selectorLabel")}
       </p>
+      <select
+        className="md:hidden w-full border-2 border-black rounded-xl px-4 py-2 font-heading text-sm font-bold bg-white"
+        value={value}
+        onChange={(e) => onChange(e.target.value as LRDatasetId)}
+      >
+        {LR_DATASETS.map((d) => (
+          <option key={d.id} value={d.id}>
+            {t(d.titleKey)}
+          </option>
+        ))}
+      </select>
       <div
-        className="inline-flex flex-wrap rounded-full border-2 border-black bg-white p-1 gap-1"
+        className="hidden md:inline-flex flex-wrap rounded-full border-2 border-black bg-white p-1 gap-1"
         role="tablist"
       >
         {LR_DATASETS.map((d) => {
