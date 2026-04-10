@@ -13,4 +13,4 @@
 
 ## 3. Commit
 
-- [ ] 3.1 Create atomic commit using conventional commits (e.g., `feat: replace category filter buttons with select on mobile`)
+- [x] 3.1 Create atomic commit using conventional commits (e.g., `feat: replace category filter buttons with select on mobile`)

@@ -19,15 +19,23 @@ The homepage SHALL display a hero section above the algorithm grid with the plat
 - **THEN** the system displays the platform name, tagline, and a CTA button/link to the algorithm catalog section
 
 ### Requirement: Category filter
-The homepage SHALL provide filter controls to filter algorithms by category: All, Supervised (Regression), Supervised (Classification), Deep Learning.
+The homepage SHALL provide filter controls to filter algorithms by category: All, Regression, Classification, Deep Learning, Clustering. On mobile viewports (`<768px`), the filter SHALL render as a native `<select>` dropdown. On desktop/tablet viewports (`≥768px`), the filter SHALL render as pill-shaped buttons.
 
 #### Scenario: User filters by category
 - **WHEN** the user selects "Deep Learning" filter
-- **THEN** only CNN and Transformers cards are displayed
+- **THEN** only Deep Learning algorithm cards are displayed
 
 #### Scenario: User clears filter
 - **WHEN** the user selects "All" filter
-- **THEN** all 8 algorithm cards are displayed
+- **THEN** all algorithm cards are displayed
+
+#### Scenario: Mobile filter rendering
+- **WHEN** the user views the homepage on a viewport width <768px
+- **THEN** the category filter is displayed as a `<select>` dropdown
+
+#### Scenario: Desktop filter rendering
+- **WHEN** the user views the homepage on a viewport width ≥768px
+- **THEN** the category filter is displayed as pill-shaped buttons
 
 ### Requirement: Language toggle
 The homepage header SHALL include a visible PT-BR / EN language toggle that persists the selection in localStorage and applies immediately without page reload.
